@@ -125,11 +125,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
       transition: background 0.4s ease, padding 0.3s ease, box-shadow 0.3s ease;
     }
     nav.scrolled {
       background: rgba(26, 26, 26, 0.97);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       padding: 16px 32px;
       box-shadow: 0 1px 24px rgba(0,0,0,0.3);
     }
@@ -188,8 +193,13 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 0 64px 80px;
-      max-width: 780px;
+      padding: 32px 40px;
+      max-width: 700px;
+      margin: 0 0 80px 64px;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .hero-tag {
@@ -291,6 +301,7 @@
       display: flex;
       justify-content: flex-end;
       padding: 0 120px 80px 0;
+      pointer-events: none;
     }
 
     .hero-stat-card {
@@ -982,7 +993,7 @@
       .proof-grid,
       .proof-stats,
       .faq-grid { grid-template-columns: 1fr; }
-      .hero-content { padding: 0 32px 80px; }
+      .hero-content { margin: 0 0 40px 24px; padding: 24px; }
       .hero-stat-card { display: none; }
       .hero-strip { display: none; }
       .form-row,
