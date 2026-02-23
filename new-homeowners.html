@@ -1253,7 +1253,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="200">
           <div class="product-img">
-            <img src="assets/images/download-9.webp" alt="Roller Blinds" />
+            <img src="assets/images/download-8.webp" alt="Roller Blinds" />
           </div>
           <div class="product-info">
             <h3>Roller Blinds</h3>
@@ -1264,7 +1264,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="0">
           <div class="product-img">
-            <img src="assets/images/download-77.webp" alt="Sheer and Blackout Combo" />
+            <img src="assets/images/FIFT-0079_Alberta-Jet_Cameo-1_Original_1x.webp" alt="Sheer and Blackout Combo" />
           </div>
           <div class="product-info">
             <h3>Sheer & Blackout Combo</h3>
@@ -1275,7 +1275,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="100">
           <div class="product-img">
-            <img src="assets/images/download-10.webp" alt="Wooden Blinds" />
+            <img src="assets/images/download-11-1.webp" alt="Wooden Blinds" />
           </div>
           <div class="product-info">
             <h3>Wooden Blinds</h3>
@@ -1286,7 +1286,7 @@
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="200">
           <div class="product-img">
-            <img src="assets/images/download-8.webp" alt="Motorized Curtains" />
+            <img src="assets/images/download-9.webp" alt="Motorized Curtains" />
           </div>
           <div class="product-info">
             <h3>Motorized Curtains</h3>
@@ -1405,7 +1405,7 @@
           </div>
         </div>
 
-        <div class="booking-right" data-aos="fade-left" data-aos-delay="100">
+        <div class="booking-right" id="booking-form" data-aos="fade-left" data-aos-delay="100">
           <div class="booking-form">
             <div class="form-title">Book Your Free Visit</div>
             <div class="form-sub">Takes less than 2 minutes. We'll confirm within a few hours.</div>
@@ -1653,5 +1653,20 @@
     WhatsApp Us
   </a>
 
+
+  <script>
+    // On mobile, scroll directly to the form (not the top of the booking section)
+    if (window.innerWidth < 900) {
+      document.querySelectorAll('a[href="#booking"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var form = document.getElementById('booking-form');
+          if (form) {
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    }
+  </script>
 </body>
 </html>

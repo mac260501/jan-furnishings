@@ -541,7 +541,7 @@
             <p style="font-size:12px;color:var(--text-muted);letter-spacing:0.06em;">— Nour H., homeowner, The Lakes</p>
           </div>
         </div>
-        <div class="booking-right" data-aos="fade-left" data-aos-delay="100">
+        <div class="booking-right" id="booking-form" data-aos="fade-left" data-aos-delay="100">
           <div class="booking-form">
             <div class="form-title">Book Your Free Assessment</div>
             <div class="form-sub">Quick to fill in. We'll confirm within a few hours.</div>
@@ -696,5 +696,20 @@
     WhatsApp Us
   </a>
 
+
+  <script>
+    // On mobile, scroll directly to the form (not the top of the booking section)
+    if (window.innerWidth < 900) {
+      document.querySelectorAll('a[href="#booking"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var form = document.getElementById('booking-form');
+          if (form) {
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    }
+  </script>
 </body>
 </html>
