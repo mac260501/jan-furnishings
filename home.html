@@ -86,18 +86,23 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 24px 32px;
       display: flex; align-items: center; justify-content: space-between;
-      transition: background 0.4s ease, padding 0.4s ease, backdrop-filter 0.4s ease;
+      transition: all 0.4s ease;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 2px 40px rgba(0,0,0,0.25);
     }
     nav.scrolled {
-      background: rgba(26,26,26,0.96);
-      backdrop-filter: blur(12px);
+      background: rgba(26,26,26,0.97);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       padding: 16px 32px;
       border-bottom: 1px solid rgba(201,169,110,0.15);
+      box-shadow: 0 1px 24px rgba(0,0,0,0.3);
     }
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: 22px; font-weight: 500; letter-spacing: 0.05em;
-      color: var(--white); transition: color 0.4s ease;
+      color: var(--white); transition: color 0.4s ease; text-shadow: 0 1px 6px rgba(0,0,0,0.4);
     }
     nav.scrolled .nav-logo { color: var(--gold); }
 
@@ -169,15 +174,24 @@
       position: absolute; inset: 0;
       background: linear-gradient(
         to top,
-        rgba(26,26,26,0.92) 0%,
-        rgba(26,26,26,0.5) 50%,
-        rgba(26,26,26,0.15) 100%
+        rgba(26,26,26,0.6) 0%,
+        rgba(26,26,26,0.15) 50%,
+        rgba(26,26,26,0.0) 100%
       );
     }
     .hero-content {
       position: relative; z-index: 2;
       padding: 0 32px 80px;
-      max-width: 760px;
+      max-width: 680px;
+    }
+    /* Glass panel wrapping headline + sub + actions */
+    .hero-text-glass {
+      background: rgba(26,26,26,0.52);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 44px 52px 48px;
+      margin-bottom: 0;
     }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 10px;
@@ -731,6 +745,7 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
+    <div class="hero-text-glass">
     <div class="hero-tag">Dubai's Curtain & Blinds Specialists</div>
     <h1 class="hero-title">
       Beautiful windows,<br><em>effortlessly done.</em>

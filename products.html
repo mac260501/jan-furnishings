@@ -42,12 +42,12 @@
     .btn-outline:hover { background: var(--gold); color: var(--charcoal); }
 
     /* ─── NAV ───────────────────────────────────────── */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; transition: background 0.4s ease, padding 0.4s ease; }
-    nav.scrolled { background: rgba(26,26,26,0.96); backdrop-filter: blur(12px); padding: 16px 32px; border-bottom: 1px solid rgba(201,169,110,0.15); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.05em; color: var(--white); transition: color 0.4s ease; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; background: rgba(0,0,0,0.45); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 2px 40px rgba(0,0,0,0.25); }
+    nav.scrolled { background: rgba(26,26,26,0.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 16px 32px; border-bottom: 1px solid rgba(201,169,110,0.15); box-shadow: 0 1px 24px rgba(0,0,0,0.3); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.05em; color: var(--white); transition: color 0.4s ease; text-shadow: 0 1px 6px rgba(0,0,0,0.4); }
     nav.scrolled .nav-logo { color: var(--gold); }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.3s ease; }
+    .nav-links a { font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.92); transition: color 0.3s ease; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
     .nav-cta { background: var(--gold); color: var(--charcoal); padding: 10px 22px; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.3s ease; font-family: 'DM Sans', sans-serif; }
     .nav-cta:hover { background: var(--white); }
@@ -61,28 +61,47 @@
 
     /* ─── PAGE HERO ─────────────────────────────────── */
     #page-hero {
-      padding: 160px 0 80px;
+      min-height: 70vh;
       background: var(--charcoal-2);
       border-bottom: 1px solid rgba(201,169,110,0.1);
       position: relative;
       overflow: hidden;
+      display: flex; align-items: flex-end;
+      padding-bottom: 0;
     }
+    /* Full-bleed background image — no dim */
     .page-hero-bg {
       position: absolute; inset: 0;
       background: url('https://thejanfurniture.com/wp-content/uploads/2026/01/FIFT-0079_Alberta-Jet_Cameo-1_Original_1x.webp') center/cover;
-      opacity: 0.06;
+      opacity: 1;
+    }
+    /* Subtle bottom gradient so filter bar reads cleanly */
+    .page-hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(26,26,26,0.15) 0%, rgba(26,26,26,0.0) 40%, rgba(26,26,26,0.55) 100%);
     }
     .page-hero-inner {
       position: relative; z-index: 1;
       display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap;
+      width: 100%; padding: 80px 32px 56px;
+      max-width: 1264px; margin: 0 auto;
     }
-    .page-hero-text { max-width: 560px; }
-    .page-hero-text h1 { font-size: clamp(48px, 6vw, 80px); margin: 16px 0 24px; }
-    .page-hero-text p { font-size: 16px; color: var(--text-muted); line-height: 1.8; max-width: 440px; }
+    /* Glassmorphism text panel */
+    .page-hero-text {
+      max-width: 560px;
+      background: rgba(26,26,26,0.5);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 36px 40px;
+    }
+    .page-hero-text h1 { font-size: clamp(36px, 5vw, 64px); margin: 16px 0 16px; }
+    .page-hero-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; max-width: 440px; }
     .page-hero-stats { display: flex; gap: 2px; flex-shrink: 0; }
-    .ph-stat { padding: 20px 28px; background: rgba(201,169,110,0.06); border: 1px solid rgba(201,169,110,0.12); text-align: center; min-width: 100px; }
+    .ph-stat { padding: 20px 28px; background: rgba(26,26,26,0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.1); text-align: center; min-width: 110px; }
     .ph-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--gold); }
-    .ph-stat-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; }
+    .ph-stat-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(240,237,232,0.7); margin-top: 4px; }
 
     /* ─── CATEGORY FILTER ───────────────────────────── */
     #filter-bar {
