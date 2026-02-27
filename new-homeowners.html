@@ -1489,6 +1489,16 @@ gtag('config', 'G-W2DJLPY4HR');
                 <label for="area">Area / Community</label>
                 <input type="text" id="area" placeholder="e.g. Dubai Marina, JVC, Downtown..." required />
               </div>
+              <div class="form-group">
+                <label for="rooms">How many rooms?</label>
+                <select id="rooms" required>
+                  <option value="" disabled selected>Select room count</option>
+                  <option value="Studio">Studio</option>
+                  <option value="1-2 Rooms">1-2</option>
+                  <option value="3-4 Rooms">3-4</option>
+                  <option value="5+ Rooms">5+</option>
+                </select>
+              </div>
               <button type="submit" class="form-submit">Get My Package Quote →</button>
               <p class="form-note">🔒 Your details are kept private. No spam, ever.</p>
             </form>
@@ -1645,10 +1655,11 @@ gtag('config', 'G-W2DJLPY4HR');
       const name  = document.getElementById('name').value;
       const phone = document.getElementById('phone').value;
       const area  = document.getElementById('area').value;
+      const rooms = document.getElementById('rooms').value;
 
       const msg = encodeURIComponent(
         `Hello Jan Furnishings! I'd like to get a move-in package quote.\n\n` +
-        `Name: ${name}\nWhatsApp: ${phone}\nArea: ${area}`
+        `Name: ${name}\nWhatsApp: ${phone}\nArea: ${area}\nRooms: ${rooms}`
       );
 
       form.style.display = 'none';
