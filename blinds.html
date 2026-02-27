@@ -34,11 +34,12 @@
       --text:       #F0EDE8;
       --text-muted: #9A9590;
       --white:      #FFFFFF;
+      --offer-banner-height: 56px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--charcoal); color: var(--text); overflow-x: hidden; font-weight: 300; padding-top: 56px; }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; overflow-x: clip; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--charcoal); color: var(--text); overflow-x: hidden; overflow-x: clip; font-weight: 300; padding-top: var(--offer-banner-height); max-width: 100%; }
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
     h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; line-height: 1.1; }
@@ -62,7 +63,7 @@
     .offer-banner .offer-link:hover { color: var(--gold-light); }
     @media (max-width: 600px) { .offer-banner { font-size: 12px; height: auto; min-height: 56px; flex-wrap: wrap; padding: 10px 16px; } .offer-banner strong { font-size: 13px; } }
 
-    nav { position: fixed; top: 56px; left: 0; right: 0; z-index: 100; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); transition: background 0.4s ease, padding 0.3s ease; }
+    nav { position: fixed; top: var(--offer-banner-height); left: 0; right: 0; z-index: 100; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); transition: background 0.4s ease, padding 0.3s ease; }
     nav.scrolled { background: rgba(26,26,26,0.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 16px 32px; box-shadow: 0 1px 24px rgba(0,0,0,0.3); }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.05em; color: var(--white); transition: color 0.4s ease; }
     nav.scrolled .nav-logo { color: var(--gold); }
@@ -70,7 +71,7 @@
     .nav-cta:hover { background: var(--white); color: var(--charcoal); }
 
     /* HERO */
-    #hero { position: relative; height: 100vh; min-height: 680px; display: flex; align-items: flex-end; overflow: hidden; }
+    #hero { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; padding-top: 130px; }
     .hero-bg {
       position: absolute; inset: 0;
       background: linear-gradient(to bottom, rgba(20,18,16,0.2) 0%, rgba(20,18,16,0.1) 40%, rgba(20,18,16,0.75) 100%),
@@ -209,6 +210,7 @@
 
     /* BOOKING */
     #booking { background: #222222; padding: 120px 0; }
+    #booking, #booking-form { scroll-margin-top: calc(var(--offer-banner-height) + 92px); }
     .booking-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .booking-left h2 { font-size: clamp(36px, 4vw, 52px); color: var(--gold); margin-bottom: 20px; }
     .booking-left p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 32px; }
@@ -258,15 +260,22 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     @media (max-width: 900px) {
+      #hero {
+        height: auto;
+        min-height: 72svh;
+        padding-top: 96px;
+      }
       .roi-grid, .booking-inner, .multi-inner { grid-template-columns: 1fr; gap: 48px; }
       .steps-grid, .products-grid, .proof-grid, .proof-stats, .faq-grid, .metrics-grid { grid-template-columns: 1fr 1fr; }
-      .hero-content { margin: 0 0 40px 24px; padding: 24px; }
+      .hero-content { margin: 0 0 18px 16px; padding: 22px; }
       .hero-stat-card { display: none; }
       .hero-strip { display: none; }
+      .step-arrow { display: none; }
       .form-row, .calendar-row { grid-template-columns: 1fr; }
       .roi-images { height: 360px; }
       .booking-form { padding: 32px 24px; }
       .multi-visual { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
     @media (max-width: 580px) {
       .metrics-grid { grid-template-columns: 1fr 1fr; }
@@ -742,6 +751,17 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 700, once: true, offset: 60, easing: 'ease-out-cubic' });
+    const offerBanner = document.querySelector('.offer-banner');
+    function syncOfferOffset() {
+      if (!offerBanner) return;
+      const bannerHeight = Math.ceil(offerBanner.getBoundingClientRect().height);
+      document.documentElement.style.setProperty('--offer-banner-height', `${bannerHeight}px`);
+    }
+    syncOfferOffset();
+    window.addEventListener('resize', syncOfferOffset);
+    window.addEventListener('orientationchange', syncOfferOffset);
+    window.addEventListener('load', syncOfferOffset);
+
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
     function toggleFaq(el) {
@@ -774,18 +794,23 @@
 
 
   <script>
-    // On mobile, scroll directly to the form (not the top of the booking section)
-    if (window.innerWidth < 900) {
-      document.querySelectorAll('a[href="#booking"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          var form = document.getElementById('booking-form');
-          if (form) {
-            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
+    // Scroll to booking with fixed banner/nav offset so the form is never clipped
+    document.querySelectorAll('a[href="#booking"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.getElementById('booking-form') || document.getElementById('booking');
+        var nav = document.getElementById('navbar');
+        var banner = document.querySelector('.offer-banner');
+        if (!target) return;
+
+        var offset = 12;
+        if (banner) offset += banner.getBoundingClientRect().height;
+        if (nav) offset += nav.getBoundingClientRect().height;
+
+        var y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
       });
-    }
+    });
   </script>
 </body>
 </html>
