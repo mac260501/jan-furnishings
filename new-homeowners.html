@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jan Furnishings — Custom Curtains & Blinds for Your New Home</title>
+  <title>Jan Furnishings — Complete Move-In Window Package Dubai | Ramadan Offer</title>
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2DJLPY4HR"></script>
@@ -50,6 +50,7 @@ gtag('config', 'G-W2DJLPY4HR');
       color: var(--text);
       overflow-x: hidden;
       font-weight: 300;
+      padding-top: 56px;
     }
 
     img { display: block; max-width: 100%; }
@@ -125,9 +126,16 @@ gtag('config', 'G-W2DJLPY4HR');
     .btn-outline:hover { background: var(--gold); color: var(--charcoal); }
 
     /* ─── NAV ───────────────────────────────────────── */
+    /* OFFER BANNER */
+    .offer-banner { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: linear-gradient(90deg, #2D1500 0%, #1A0A00 50%, #2D1500 100%); border-bottom: 2px solid rgba(201,169,110,0.6); color: rgba(255,255,255,0.92); text-align: center; padding: 0 20px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.04em; height: 56px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 2px 20px rgba(201,169,110,0.15); }
+    .offer-banner strong { color: var(--gold); font-weight: 600; font-size: 15px; }
+    .offer-banner .offer-link { color: var(--gold); font-weight: 500; border-bottom: 1px solid rgba(201,169,110,0.6); padding-bottom: 1px; margin-left: 8px; white-space: nowrap; font-size: 13px; letter-spacing: 0.06em; }
+    .offer-banner .offer-link:hover { color: var(--gold-light); }
+    @media (max-width: 600px) { .offer-banner { font-size: 12px; height: auto; min-height: 56px; flex-wrap: wrap; padding: 10px 16px; } .offer-banner strong { font-size: 13px; } }
+
     nav {
       position: fixed;
-      top: 0;
+      top: 56px;
       left: 0;
       right: 0;
       z-index: 100;
@@ -179,11 +187,11 @@ gtag('config', 'G-W2DJLPY4HR');
     /* ─── HERO ──────────────────────────────────────── */
     #hero {
       position: relative;
-      height: 100vh;
-      min-height: 680px;
+      min-height: 100vh;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
+      padding-top: 130px;
     }
 
     .hero-bg {
@@ -206,11 +214,18 @@ gtag('config', 'G-W2DJLPY4HR');
       padding: 32px 40px;
       max-width: 700px;
       margin: 0 0 80px 64px;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0,0,0,0.38);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.08);
     }
+
+    /* HERO OFFER STRIP */
+    .hero-offer-strip { background: linear-gradient(135deg, #C9A96E 0%, #E8D5B0 55%, #C9A96E 100%); margin: -32px -40px 28px -40px; padding: 18px 24px; text-align: center; border-bottom: 1px solid rgba(201,169,110,0.3); }
+    .hero-offer-strip .hos-eyebrow { font-size: 9px; font-weight: 500; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(26,10,0,0.5); margin-bottom: 4px; }
+    .hero-offer-strip .hos-main { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: #1A0A00; line-height: 1.2; }
+    .hero-offer-strip .hos-sub { font-size: 11px; color: rgba(26,10,0,0.6); letter-spacing: 0.1em; margin-top: 3px; text-transform: uppercase; }
+    @media (max-width: 900px) { .hero-offer-strip { margin: -24px -24px 20px -24px; } }
 
     .hero-tag {
       display: inline-block;
@@ -644,6 +659,7 @@ gtag('config', 'G-W2DJLPY4HR');
       color: var(--text-muted);
       margin-left: 4px;
     }
+    .ramadan-price-label { display: inline-block; background: rgba(201,169,110,0.12); border: 1px solid rgba(201,169,110,0.35); color: var(--gold); font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; margin-bottom: 10px; }
 
     /* ─── SOCIAL PROOF ──────────────────────────────── */
     #proof {
@@ -1016,7 +1032,7 @@ gtag('config', 'G-W2DJLPY4HR');
       .proof-grid,
       .proof-stats,
       .faq-grid { grid-template-columns: 1fr; }
-      .hero-content { margin: 0 0 40px 24px; padding: 24px; }
+      .hero-content { margin: 0 0 40px 24px; padding: 24px 24px 24px 24px; }
       .hero-stat-card { display: none; }
       .hero-strip { display: none; }
       .form-row,
@@ -1060,9 +1076,15 @@ gtag('config', 'G-W2DJLPY4HR');
   <!-- ══════════════════════════════════════════════
        NAV
   ══════════════════════════════════════════════ -->
+  <!-- OFFER BANNER -->
+  <div class="offer-banner">
+    🌙 <strong>Ramadan Offer:</strong> Complete Move-In Package — Curtains + Blinds for Every Room &nbsp;·&nbsp; Ends 7 March
+    <a href="#booking" class="offer-link">Claim Offer →</a>
+  </div>
+
   <nav id="navbar">
     <a href="#" class="nav-logo">Jan Furnishings</a>
-    <a href="#booking" class="nav-cta">Book a Free Visit</a>
+    <a href="#booking" class="nav-cta">Get Package Quote</a>
   </nav>
 
 
@@ -1073,16 +1095,21 @@ gtag('config', 'G-W2DJLPY4HR');
     <div class="hero-bg"></div>
 
     <div class="hero-content">
-      <div class="hero-tag">For New Homeowners & Tenants · Dubai, UAE</div>
+      <div class="hero-offer-strip">
+        <div class="hos-eyebrow">🌙 Ramadan Exclusive</div>
+        <div class="hos-main">Buy 1 Get 1 Free + Save 30%</div>
+        <div class="hos-sub">Move-In Package · Ends 7 March 2026</div>
+      </div>
+      <div class="hero-tag">New Homeowners & Tenants · Ramadan Move-In Package · Dubai, UAE</div>
       <h1 class="hero-headline">
-        Your new home<br>deserves <em>beautiful</em><br>windows.
+        Complete your new home<br>with the <em>full window package.</em>
       </h1>
       <p class="hero-subtext">
-        Moving in is a big moment. Don't leave your windows bare. We come to you, measure everything, and have it fitted — all before you've unpacked.
+        Curtains and blinds for every room — measured, made, and installed before you've unpacked. One visit, one team, done.
       </p>
       <div class="hero-actions">
         <a href="#booking" class="btn-primary">
-          Book a Free Visit
+          Get My Move-In Package Quote
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href="#products" class="btn-outline" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.4);">See Our Products</a>
@@ -1159,23 +1186,23 @@ gtag('config', 'G-W2DJLPY4HR');
         </div>
 
         <div class="intro-text" data-aos="fade-left" data-aos-delay="100">
-          <div class="tag">Why Jan Furnishings</div>
-          <h2>Get settled in with windows you'll love from day one.</h2>
-          <p>When you're moving into a new space, the last thing you need is another complicated decision. We make curtains and blinds completely effortless — one visit, no guesswork, no hassle.</p>
-          <p>Our team comes to your home, takes measurements, brings fabric samples, and gives you an honest quote on the spot. Most installs are done within the week.</p>
+          <div class="tag">Move-In Packages</div>
+          <h2>Curtains + blinds for every room. Done in days.</h2>
+          <p>New homeowners shouldn't have to navigate curtains and blinds separately. We assess your entire home in one visit — advising room by room on what works best, then making and installing everything together.</p>
+          <p>One quote covers everything. Most move-in packages are installed within the same week.</p>
 
           <ul class="intro-checklist">
             <li>
               <div class="check-icon">✓</div>
-              <span><strong>Free in-home consultation</strong> — we come to you, not the other way around</span>
+              <span><strong>Complete room-by-room window package</strong> — curtains, blinds, or both — all in one visit</span>
             </li>
             <li>
               <div class="check-icon">✓</div>
-              <span><strong>Accurate measurements taken on-site</strong> — no guessing, no wrong sizes</span>
+              <span><strong>One visit, one quote, one installation day</strong> — no back-and-forth, no hassle</span>
             </li>
             <li>
               <div class="check-icon">✓</div>
-              <span><strong>UAE-grade materials</strong> — designed to handle Dubai heat and light year-round</span>
+              <span><strong>Custom-made to your exact window sizes</strong> — no guessing, no wrong sizes</span>
             </li>
             <li>
               <div class="check-icon">✓</div>
@@ -1184,7 +1211,7 @@ gtag('config', 'G-W2DJLPY4HR');
           </ul>
 
           <a href="#booking" class="btn-primary">
-            Book My Free Visit
+            Get My Move-In Package Quote
             <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
@@ -1245,9 +1272,9 @@ gtag('config', 'G-W2DJLPY4HR');
   <section id="products">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <div class="tag">Our Products</div>
-        <h2 class="dark" style="color:var(--gold);">Perfect for every room, every window.</h2>
-        <p class="dark">Starting prices for standard 2m × 3m windows. All custom-made to your exact size.</p>
+        <div class="tag">Move-In Package Options</div>
+        <h2 class="dark" style="color:var(--gold);">Build your complete home package.</h2>
+        <p class="dark">Mix curtains, blinds, or both — by room. All custom-made and installed in one visit. Starting prices per standard 2m × 3m window.</p>
       </div>
 
       <div class="products-grid">
@@ -1259,7 +1286,8 @@ gtag('config', 'G-W2DJLPY4HR');
           <div class="product-info">
             <h3>Sheer Curtains</h3>
             <p>Light-filtering elegance. Creates airflow and brightness while maintaining privacy during the day.</p>
-            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 600</del> <strong style="color:var(--gold);">AED 533</strong> <span>/ standard window</span></div>
+            <div class="ramadan-price-label">🌙 30% Off — Ramadan Price</div>
+            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 760</del> <strong style="color:var(--gold);">AED 533</strong> <span>/ standard window</span></div>
           </div>
         </div>
 
@@ -1270,7 +1298,8 @@ gtag('config', 'G-W2DJLPY4HR');
           <div class="product-info">
             <h3>Blackout Curtains</h3>
             <p>Essential for Dubai living. Blocks heat, light, and noise — perfect for bedrooms and nurseries.</p>
-            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 826</del> <strong style="color:var(--gold);">AED 599</strong> <span>/ standard window</span></div>
+            <div class="ramadan-price-label">🌙 30% Off — Ramadan Price</div>
+            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 855</del> <strong style="color:var(--gold);">AED 599</strong> <span>/ standard window</span></div>
           </div>
         </div>
 
@@ -1281,7 +1310,8 @@ gtag('config', 'G-W2DJLPY4HR');
           <div class="product-info">
             <h3>Roller Blinds</h3>
             <p>Clean, modern, and low-maintenance. Ideal for kitchens, offices, and contemporary living rooms.</p>
-            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 500</del> <strong style="color:var(--gold);">AED 393</strong> <span>/ standard window</span></div>
+            <div class="ramadan-price-label">🌙 30% Off — Ramadan Price</div>
+            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 560</del> <strong style="color:var(--gold);">AED 393</strong> <span>/ standard window</span></div>
           </div>
         </div>
 
@@ -1292,7 +1322,8 @@ gtag('config', 'G-W2DJLPY4HR');
           <div class="product-info">
             <h3>Sheer & Blackout Combo</h3>
             <p>The best of both worlds. Sheer for daytime, blackout for night. The most popular choice in Dubai.</p>
-            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 1,244</del> <strong style="color:var(--gold);">AED 999</strong> <span>/ standard window</span></div>
+            <div class="ramadan-price-label">🌙 30% Off — Ramadan Price</div>
+            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 1,425</del> <strong style="color:var(--gold);">AED 999</strong> <span>/ standard window</span></div>
           </div>
         </div>
 
@@ -1303,7 +1334,8 @@ gtag('config', 'G-W2DJLPY4HR');
           <div class="product-info">
             <h3>Wooden Blinds</h3>
             <p>Warm, natural, and timeless. Adds texture and sophistication to any living room or study.</p>
-            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 816</del> <strong style="color:var(--gold);">AED 499</strong> <span>/ standard window</span></div>
+            <div class="ramadan-price-label">🌙 30% Off — Ramadan Price</div>
+            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 710</del> <strong style="color:var(--gold);">AED 499</strong> <span>/ standard window</span></div>
           </div>
         </div>
 
@@ -1314,7 +1346,8 @@ gtag('config', 'G-W2DJLPY4HR');
           <div class="product-info">
             <h3>Motorized Curtains</h3>
             <p>Open and close your curtains from your phone or voice assistant. Smart living starts here.</p>
-            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 2,085</del> <strong style="color:var(--gold);">AED 1,299</strong> <span>/ standard window</span></div>
+            <div class="ramadan-price-label">🌙 30% Off — Ramadan Price</div>
+            <div class="product-price"><del style="color:#888;font-size:0.85em;">AED 1,855</del> <strong style="color:var(--gold);">AED 1,299</strong> <span>/ standard window</span></div>
           </div>
         </div>
 
@@ -1322,7 +1355,7 @@ gtag('config', 'G-W2DJLPY4HR');
 
       <div style="text-align:center;margin-top:48px;" data-aos="fade-up">
         <a href="#booking" class="btn-primary">
-          Get a Free Quote for My Home
+          Get My Move-In Package Quote
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -1407,90 +1440,47 @@ gtag('config', 'G-W2DJLPY4HR');
       <div class="booking-inner">
 
         <div class="booking-left" data-aos="fade-right">
-          <div class="tag" style="margin-bottom:20px;">Book a Free Visit</div>
-          <h2>We'll come to you. <em class="serif" style="font-style:italic;">For free.</em></h2>
-          <p>Our team visits your new home, takes accurate measurements, brings fabric samples, and provides a transparent quote — all at no cost and no obligation.</p>
+          <div class="tag" style="margin-bottom:20px;">🌙 Ramadan Offer — Ends 7 March</div>
+          <h2>Get your complete<br><em class="serif" style="font-style:italic;">move-in package.</em></h2>
+          <p>Curtains + blinds for every room — one visit, one quote, one installation day. Book during Ramadan and claim our BOGO deal on all curtains included in your package.</p>
 
           <ul class="booking-perks">
-            <li><div class="perk-dot"></div> No obligation — get a quote and decide later</li>
-            <li><div class="perk-dot"></div> We bring samples directly to your home</li>
+            <li><div class="perk-dot"></div> Room-by-room advice — we tell you exactly what works where</li>
+            <li><div class="perk-dot"></div> Curtains, blinds, or both — all quoted together</li>
             <li><div class="perk-dot"></div> Available 7 days a week across Dubai</li>
             <li><div class="perk-dot"></div> Installation typically within the same week</li>
-            <li><div class="perk-dot"></div> Dedicated support from booking to after install</li>
+            <li><div class="perk-dot"></div> Ramadan BOGO offer: Buy 1 Get 1 Free on all curtains</li>
           </ul>
 
           <div style="margin-top:48px;overflow:hidden;height:260px;">
             <img src="assets/images/ryunosuke-kikuno-XsAS1ZhpdBk-unsplash.jpg" alt="Curtain detail" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;" />
           </div>
           <div style="padding:28px 32px;background:#222;border-left:3px solid var(--gold);">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--gold-light);margin-bottom:8px;">"The team was at our apartment within 48 hours. We had our curtains installed before we'd even finished unpacking."</p>
-            <p style="font-size:12px;color:var(--text-muted);letter-spacing:0.06em;">— Layla M., new tenant, Palm Jumeirah</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--gold-light);margin-bottom:8px;">"We did the whole apartment in one visit — blackout in the bedrooms, sheers in the living room, roller blinds in the kitchen. Done in a single day."</p>
+            <p style="font-size:12px;color:var(--text-muted);letter-spacing:0.06em;">— Sara M., new homeowner, Dubai Marina</p>
           </div>
         </div>
 
         <div class="booking-right" id="booking-form" data-aos="fade-left" data-aos-delay="100">
           <div class="booking-form">
-            <div class="form-title">Book Your Free Visit</div>
-            <div class="form-sub">Takes less than 2 minutes. We'll confirm within a few hours.</div>
+            <div class="form-title">Get Your Move-In Package Quote</div>
+            <div class="form-sub">Curtains + blinds for every room. We'll visit, advise, and quote everything in one go.</div>
 
             <form id="bookingForm" onsubmit="handleSubmit(event)">
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" placeholder="Sara" required />
-                </div>
-                <div class="form-group">
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" placeholder="Al Mansouri" required />
-                </div>
-              </div>
-
               <div class="form-group">
-                <label for="phone">WhatsApp / Phone Number</label>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Sara Al Mansouri" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">WhatsApp Number</label>
                 <input type="tel" id="phone" placeholder="+971 50 000 0000" required />
               </div>
-
               <div class="form-group">
                 <label for="area">Area / Community</label>
                 <input type="text" id="area" placeholder="e.g. Dubai Marina, JVC, Downtown..." required />
               </div>
-
-              <div class="form-group">
-                <label for="rooms">Number of Windows / Rooms</label>
-                <select id="rooms" required>
-                  <option value="" disabled selected>Select an option</option>
-                  <option value="1-3">1–3 windows (1 room)</option>
-                  <option value="4-6">4–6 windows (2–3 rooms)</option>
-                  <option value="7-10">7–10 windows (full apartment)</option>
-                  <option value="10+">10+ windows (villa / large home)</option>
-                </select>
-              </div>
-
-              <div class="calendar-row">
-                <div class="form-group">
-                  <label for="visit-date">Preferred Date</label>
-                  <input type="date" id="visit-date" required />
-                </div>
-                <div class="form-group">
-                  <label for="visit-time">Preferred Time</label>
-                  <select id="visit-time" required>
-                    <option value="" disabled selected>Select time</option>
-                    <option value="morning">Morning (9am – 12pm)</option>
-                    <option value="afternoon">Afternoon (12pm – 4pm)</option>
-                    <option value="evening">Evening (4pm – 7pm)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="notes">Anything else we should know? <span style="font-size:10px;opacity:0.6;">(optional)</span></label>
-                <textarea id="notes" placeholder="e.g. I'm interested in blackout curtains for the bedroom and sheers for the living room..."></textarea>
-              </div>
-
-              <button type="submit" class="form-submit">Book My Free Visit →</button>
+              <button type="submit" class="form-submit">Get My Package Quote →</button>
               <p class="form-note">🔒 Your details are kept private. No spam, ever.</p>
-
             </form>
 
             <!-- Success state -->
@@ -1624,43 +1614,24 @@ gtag('config', 'G-W2DJLPY4HR');
       if (!isOpen) el.classList.add('open');
     }
 
-    // Set min date on date picker to today
-    const dateInput = document.getElementById('visit-date');
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    dateInput.min = `${yyyy}-${mm}-${dd}`;
-
     // Form submit handler
     function handleSubmit(e) {
       e.preventDefault();
       const form = document.getElementById('bookingForm');
       const success = document.getElementById('formSuccess');
 
-      // Collect form data
-      const fname = document.getElementById('fname').value;
+      const name  = document.getElementById('name').value;
       const phone = document.getElementById('phone').value;
       const area  = document.getElementById('area').value;
-      const date  = document.getElementById('visit-date').value;
-      const time  = document.getElementById('visit-time').value;
-      const notes = document.getElementById('notes').value;
 
-      // Build WhatsApp message (acts as backend until real integration)
       const msg = encodeURIComponent(
-        `Hello Jan Furnishings! I'd like to book a free home visit.\n\n` +
-        `Name: ${fname}\n` +
-        `Phone: ${phone}\n` +
-        `Area: ${area}\n` +
-        `Preferred date: ${date} (${time})\n` +
-        (notes ? `Notes: ${notes}` : '')
+        `Hello Jan Furnishings! I'd like to get a move-in package quote.\n\n` +
+        `Name: ${name}\nWhatsApp: ${phone}\nArea: ${area}`
       );
 
-      // Show success state
       form.style.display = 'none';
       success.style.display = 'block';
 
-      // Open WhatsApp after short delay
       setTimeout(() => {
         window.open(`https://wa.me/971508806292?text=${msg}`, '_blank');
       }, 800);
