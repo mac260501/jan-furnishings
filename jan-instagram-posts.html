@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jan Furnishings — Instagram Posts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 60px; padding: 60px 20px; }
+  h2 { font-family: 'DM Sans', sans-serif; color: #555; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; }
+
+  .post {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* ═══════════════════════════════════════════
+     POST 1 — Roller blinds with Dubai skyline
+     Safety + luxury angle
+     ═══════════════════════════════════════════ */
+  .post-1 {
+    background: #0d0b09;
+  }
+  .post-1 .bg {
+    position: absolute;
+    inset: 0;
+    background: url('assets/images/70434657859991e11a06522a32d9c15c.jpg') center/cover;
+    opacity: 0.85;
+  }
+  .post-1 .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,8,6,0.15) 0%, rgba(10,8,6,0.0) 30%, rgba(10,8,6,0.7) 70%, rgba(10,8,6,0.95) 100%);
+  }
+  .post-1 .brand-mark {
+    position: absolute;
+    top: 48px;
+    left: 56px;
+    z-index: 2;
+  }
+  .post-1 .brand-mark span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.08em;
+  }
+  .post-1 .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 56px 56px;
+  }
+  .post-1 .safety-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #C9A96E;
+    border: 1.5px solid rgba(201,169,110,0.5);
+    padding: 8px 16px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(8px);
+    background: rgba(201,169,110,0.08);
+  }
+  .post-1 h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+  .post-1 h1 em {
+    font-style: italic;
+    color: #C9A96E;
+  }
+  .post-1 .sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 36px;
+  }
+  .post-1 .cta-bar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .post-1 .cta {
+    background: #C9A96E;
+    color: #0d0b09;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+  }
+  .post-1 .cta-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.04em;
+  }
+  .post-1 .stat-strip {
+    position: absolute;
+    top: 48px;
+    right: 56px;
+    z-index: 2;
+    text-align: right;
+  }
+  .post-1 .stat-strip .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(201,169,110,0.7);
+    line-height: 1;
+  }
+  .post-1 .stat-strip .label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 4px;
+  }
+
+  /* ═══════════════════════════════════════════
+     POST 2 — Curtains with Burj Khalifa view
+     Elegant lifestyle shot
+     ═══════════════════════════════════════════ */
+  .post-2 {
+    background: #0d0b09;
+  }
+  .post-2 .split-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background: url('assets/images/ecc1268256b0a8a282606bd2c5c34af3.jpg') center/cover;
+  }
+  .post-2 .split-left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 60%, #0d0b09 100%);
+  }
+  .post-2 .split-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 56px 80px 0;
+    z-index: 2;
+  }
+  .post-2 .eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #C9A96E;
+    margin-bottom: 24px;
+  }
+  .post-2 .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: #C9A96E;
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+  .post-2 h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+  .post-2 h1 em {
+    font-style: italic;
+    color: #C9A96E;
+    display: block;
+  }
+  .post-2 .desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 380px;
+  }
+  .post-2 .offer-box {
+    background: rgba(201,169,110,0.08);
+    border: 1px solid rgba(201,169,110,0.25);
+    padding: 24px 28px;
+    max-width: 340px;
+  }
+  .post-2 .offer-box .offer-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #C9A96E;
+    margin-bottom: 6px;
+  }
+  .post-2 .offer-box .offer-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+  }
+  .post-2 .brand-bottom {
+    position: absolute;
+    bottom: 48px;
+    right: 56px;
+    z-index: 3;
+    text-align: right;
+  }
+  .post-2 .brand-bottom .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.06em;
+  }
+  .post-2 .brand-bottom .loc {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-top: 4px;
+  }
+  .post-2 .accent-line {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 10%, rgba(201,169,110,0.2) 50%, transparent 90%);
+    z-index: 3;
+  }
+
+  /* ═══════════════════════════════════════════
+     POST 3 — Double-height sheer curtains
+     Ramadan offer focus
+     ═══════════════════════════════════════════ */
+  .post-3 {
+    background: #0d0b09;
+  }
+  .post-3 .bg {
+    position: absolute;
+    inset: 0;
+    background: url('assets/images/304e17a985fb92bc0dbfc9f94649122f.jpg') center top/cover;
+    opacity: 0.6;
+  }
+  .post-3 .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,8,6,0.4) 0%, rgba(10,8,6,0.2) 40%, rgba(10,8,6,0.85) 75%, rgba(10,8,6,0.98) 100%);
+  }
+  .post-3 .brand-top {
+    position: absolute;
+    top: 48px;
+    left: 56px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .post-3 .brand-top .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.06em;
+  }
+  .post-3 .brand-top .divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(255,255,255,0.2);
+  }
+  .post-3 .brand-top .ramadan {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C9A96E;
+  }
+  .post-3 .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 56px 56px;
+  }
+  .post-3 .offer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #C9A96E, #E8D5B0);
+    padding: 14px 24px;
+    margin-bottom: 32px;
+  }
+  .post-3 .offer-badge .moon {
+    font-size: 18px;
+  }
+  .post-3 .offer-badge .text {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a0a00;
+  }
+  .post-3 h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 16px;
+    max-width: 650px;
+  }
+  .post-3 h1 em {
+    font-style: italic;
+    color: #C9A96E;
+  }
+  .post-3 .sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+  .post-3 .bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .post-3 .cta {
+    background: #C9A96E;
+    color: #0d0b09;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+  }
+  .post-3 .details {
+    text-align: right;
+  }
+  .post-3 .details .d1 {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.06em;
+  }
+  .post-3 .details .d2 {
+    font-size: 11px;
+    color: rgba(201,169,110,0.6);
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Post 1 — Safety + Luxury (Blinds)</h2>
+<div class="post post-1">
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="brand-mark"><span>Jan Furnishings</span></div>
+  <div class="stat-strip">
+    <div class="num">500+</div>
+    <div class="label">Windows Fitted</div>
+  </div>
+  <div class="content">
+    <div class="safety-tag">Safety &nbsp;·&nbsp; Privacy &nbsp;·&nbsp; Light Control</div>
+    <h1>Your windows<br>deserve <em>better<br>protection.</em></h1>
+    <p class="sub">Premium roller blinds custom-made for Dubai. UV-blocking fabrics, precision fit, professional installation — keeping your home safe, private, and cool.</p>
+    <div class="cta-bar">
+      <div class="cta">Book Free Home Visit</div>
+      <div class="cta-sub">WhatsApp +971 50 880 6292</div>
+    </div>
+  </div>
+</div>
+
+<h2>Post 2 — Lifestyle / Curtains with Burj view</h2>
+<div class="post post-2">
+  <div class="split-left"></div>
+  <div class="accent-line"></div>
+  <div class="split-right">
+    <div class="eyebrow">Custom Curtains · Dubai</div>
+    <h1>Designed for<br>the view.<br><em>Made for you.</em></h1>
+    <p class="desc">Bespoke curtains measured, crafted, and installed by our team. Premium fabrics built to handle Dubai's sun — fitted in days, not weeks.</p>
+    <div class="offer-box">
+      <div class="offer-main">Buy 1 Get 1 Free</div>
+      <div class="offer-sub">Ramadan offer · Ends 20 March 2026</div>
+    </div>
+  </div>
+  <div class="brand-bottom">
+    <div class="name">Jan Furnishings</div>
+    <div class="loc">Dubai, UAE</div>
+  </div>
+</div>
+
+<h2>Post 3 — Ramadan Offer (Sheers)</h2>
+<div class="post post-3">
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="brand-top">
+    <div class="logo">Jan Furnishings</div>
+    <div class="divider"></div>
+    <div class="ramadan">Ramadan 2026</div>
+  </div>
+  <div class="content">
+    <div class="offer-badge">
+      <span class="moon">🌙</span>
+      <span class="text">Buy 1 Get 1 Free — All Curtains</span>
+    </div>
+    <h1>Transform your<br>home this<br><em>Ramadan.</em></h1>
+    <p class="sub">Custom-made curtains and blinds for every room. Free home consultation, professional installation, same-week turnaround across Dubai.</p>
+    <div class="bottom-row">
+      <div class="cta">Claim Offer on WhatsApp →</div>
+      <div class="details">
+        <div class="d1">Free measurement &amp; consultation</div>
+        <div class="d2">thejanfurniture.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
