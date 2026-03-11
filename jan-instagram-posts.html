@@ -36,7 +36,7 @@
   .post-1 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,8,6,0.15) 0%, rgba(10,8,6,0.0) 30%, rgba(10,8,6,0.7) 70%, rgba(10,8,6,0.95) 100%);
+    background: linear-gradient(180deg, rgba(10,8,6,0.55) 0%, rgba(10,8,6,0.45) 30%, rgba(10,8,6,0.78) 70%, rgba(10,8,6,0.97) 100%);
   }
   .post-1 .brand-mark {
     position: absolute;
@@ -46,7 +46,7 @@
   }
   .post-1 .brand-mark span {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     color: rgba(255,255,255,0.7);
     letter-spacing: 0.08em;
@@ -59,22 +59,64 @@
     z-index: 2;
     padding: 0 56px 56px;
   }
+  .post-1 .product-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #0d0b09;
+    background: #C9A96E;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+  }
   .post-1 .safety-tag {
     display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.25em;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #C9A96E;
-    border: 1.5px solid rgba(201,169,110,0.5);
-    padding: 8px 16px;
+    border: 1.5px solid rgba(201,169,110,0.7);
+    padding: 10px 18px;
     margin-bottom: 28px;
-    backdrop-filter: blur(8px);
-    background: rgba(201,169,110,0.08);
+    background: rgba(10,8,6,0.7);
+  }
+  .post-1 .offer-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .post-1 .offer-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #C9A96E;
+    line-height: 1;
+  }
+  .post-1 .offer-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .post-1 .offer-detail .od-top {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .post-1 .offer-detail .od-bot {
+    font-size: 14px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em;
   }
   .post-1 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 72px;
+    font-size: 96px;
     font-weight: 400;
     line-height: 1.05;
     color: #fff;
@@ -86,7 +128,7 @@
     color: #C9A96E;
   }
   .post-1 .sub {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
     color: rgba(255,255,255,0.6);
     line-height: 1.7;
@@ -101,14 +143,14 @@
   .post-1 .cta {
     background: #C9A96E;
     color: #0d0b09;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding: 16px 32px;
   }
   .post-1 .cta-sub {
-    font-size: 12px;
+    font-size: 16px;
     color: rgba(255,255,255,0.4);
     letter-spacing: 0.04em;
   }
@@ -121,13 +163,13 @@
   }
   .post-1 .stat-strip .num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 400;
     color: rgba(201,169,110,0.7);
     line-height: 1;
   }
   .post-1 .stat-strip .label {
-    font-size: 9px;
+    font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.35);
@@ -168,7 +210,7 @@
     z-index: 2;
   }
   .post-2 .eyebrow {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -186,7 +228,7 @@
   }
   .post-2 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 58px;
+    font-size: 76px;
     font-weight: 400;
     line-height: 1.1;
     color: #fff;
@@ -198,7 +240,7 @@
     display: block;
   }
   .post-2 .desc {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     color: rgba(255,255,255,0.5);
     line-height: 1.8;
@@ -213,12 +255,22 @@
   }
   .post-2 .offer-box .offer-main {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-size: 56px;
+    font-weight: 600;
     color: #C9A96E;
-    margin-bottom: 6px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .post-2 .offer-box .offer-all {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 10px;
   }
   .post-2 .offer-box .offer-sub {
-    font-size: 11px;
+    font-size: 15px;
     color: rgba(255,255,255,0.4);
     letter-spacing: 0.08em;
   }
@@ -231,12 +283,12 @@
   }
   .post-2 .brand-bottom .name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 24px;
     color: rgba(255,255,255,0.5);
     letter-spacing: 0.06em;
   }
   .post-2 .brand-bottom .loc {
-    font-size: 9px;
+    font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.25);
@@ -281,7 +333,7 @@
   }
   .post-3 .brand-top .logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     color: rgba(255,255,255,0.7);
     letter-spacing: 0.06em;
@@ -292,7 +344,7 @@
     background: rgba(255,255,255,0.2);
   }
   .post-3 .brand-top .ramadan {
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #C9A96E;
@@ -310,22 +362,22 @@
     align-items: center;
     gap: 10px;
     background: linear-gradient(135deg, #C9A96E, #E8D5B0);
-    padding: 14px 24px;
+    padding: 18px 30px;
     margin-bottom: 32px;
   }
   .post-3 .offer-badge .moon {
     font-size: 18px;
   }
   .post-3 .offer-badge .text {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #1a0a00;
   }
   .post-3 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 68px;
+    font-size: 90px;
     font-weight: 400;
     line-height: 1.05;
     color: #fff;
@@ -337,7 +389,7 @@
     color: #C9A96E;
   }
   .post-3 .sub {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
     color: rgba(255,255,255,0.55);
     line-height: 1.7;
@@ -352,7 +404,7 @@
   .post-3 .cta {
     background: #C9A96E;
     color: #0d0b09;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -362,12 +414,12 @@
     text-align: right;
   }
   .post-3 .details .d1 {
-    font-size: 12px;
+    font-size: 16px;
     color: rgba(255,255,255,0.45);
     letter-spacing: 0.06em;
   }
   .post-3 .details .d2 {
-    font-size: 11px;
+    font-size: 15px;
     color: rgba(201,169,110,0.6);
     letter-spacing: 0.1em;
     margin-top: 4px;
@@ -386,9 +438,17 @@
     <div class="label">Windows Fitted</div>
   </div>
   <div class="content">
+    <div class="product-tag">Custom Blinds · Dubai</div>
     <div class="safety-tag">Safety &nbsp;·&nbsp; Privacy &nbsp;·&nbsp; Light Control</div>
     <h1>Your windows<br>deserve <em>better<br>protection.</em></h1>
-    <p class="sub">Premium roller blinds custom-made for Dubai. UV-blocking fabrics, precision fit, professional installation — keeping your home safe, private, and cool.</p>
+    <p class="sub">Premium custom blinds for Dubai homes. UV-blocking fabrics, precision fit, professional installation — keeping your home safe, private, and cool.</p>
+    <div class="offer-row">
+      <div class="offer-num">50%</div>
+      <div class="offer-detail">
+        <div class="od-top">Off All Curtains & Blinds</div>
+        <div class="od-bot">🌙 Ramadan Offer · Ends 20 March</div>
+      </div>
+    </div>
     <div class="cta-bar">
       <div class="cta">Book Free Home Visit</div>
       <div class="cta-sub">WhatsApp +971 50 880 6292</div>
@@ -405,8 +465,9 @@
     <h1>Designed for<br>the view.<br><em>Made for you.</em></h1>
     <p class="desc">Bespoke curtains measured, crafted, and installed by our team. Premium fabrics built to handle Dubai's sun — fitted in days, not weeks.</p>
     <div class="offer-box">
-      <div class="offer-main">Buy 1 Get 1 Free</div>
-      <div class="offer-sub">Ramadan offer · Ends 20 March 2026</div>
+      <div class="offer-main">50% Off</div>
+      <div class="offer-all">All Curtains &amp; Blinds</div>
+      <div class="offer-sub">🌙 Ramadan offer · Ends 20 March 2026</div>
     </div>
   </div>
   <div class="brand-bottom">
@@ -427,7 +488,7 @@
   <div class="content">
     <div class="offer-badge">
       <span class="moon">🌙</span>
-      <span class="text">Buy 1 Get 1 Free — All Curtains</span>
+      <span class="text">50% Off — All Curtains &amp; Blinds</span>
     </div>
     <h1>Transform your<br>home this<br><em>Ramadan.</em></h1>
     <p class="sub">Custom-made curtains and blinds for every room. Free home consultation, professional installation, same-week turnaround across Dubai.</p>
