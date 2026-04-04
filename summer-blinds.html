@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jan Furnishings — Summer-Ready Blinds Dubai | Free Installation</title>
+  <title>Blinds For You by Jan Furnishings — Summer-Ready Blinds Dubai | Free Installation</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231A1A1A'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='600' fill='%23C9A96E'%3EJ%3C/text%3E%3C/svg%3E">
 
   <!-- Google tag (gtag.js) -->
@@ -79,8 +79,11 @@
     /* NAV */
     nav { position: fixed; top: var(--offer-banner-height); left: 0; right: 0; z-index: 100; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.06); transition: background 0.4s ease, padding 0.3s ease, box-shadow 0.3s ease; }
     nav.scrolled { background: rgba(26,26,26,0.97); backdrop-filter: blur(16px); padding: 16px 32px; box-shadow: 0 1px 24px rgba(0,0,0,0.3); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.05em; color: var(--white); transition: color 0.4s ease; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; letter-spacing: 0.05em; color: var(--white); transition: color 0.4s ease; display: flex; align-items: baseline; gap: 0; flex-direction: column; line-height: 1.1; }
+    .nav-logo .nav-brand-main { font-size: 22px; font-weight: 500; }
+    .nav-logo .nav-brand-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.4s; }
     nav.scrolled .nav-logo { color: var(--gold); }
+    nav.scrolled .nav-logo .nav-brand-sub { color: rgba(201,169,110,0.5); }
     .nav-cta { background: var(--gold); color: var(--charcoal); padding: 10px 22px; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.3s ease; font-family: 'DM Sans', sans-serif; }
     .nav-cta:hover { background: var(--white); color: var(--charcoal); }
 
@@ -139,6 +142,21 @@
     .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; color: var(--gold-light); line-height: 1; }
     .stat-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
     .stat-divider { width: 1px; background: rgba(255,255,255,0.15); align-self: stretch; }
+
+    /* HABIBI BADGE */
+    .habibi-badge { background: var(--gold); color: var(--charcoal); padding: 14px 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.3); max-width: 160px; text-align: center; }
+    .habibi-badge .habibi-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; font-style: italic; line-height: 1.2; }
+    .habibi-badge .habibi-sub { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 4px; opacity: 0.5; }
+    .habibi-desktop { position: absolute; top: 130px; left: 40px; z-index: 3; transform: rotate(-5deg); opacity: 0; animation: habibiFadeIn 0.8s 0.2s ease forwards; }
+    .habibi-mobile { display: none; }
+    @keyframes habibiFadeIn { from { opacity: 0; transform: rotate(-5deg) translateY(-10px) scale(0.95); } to { opacity: 1; transform: rotate(-5deg) translateY(0) scale(1); } }
+    @media (max-width: 900px) { .habibi-desktop { top: 120px; left: 20px; padding: 10px 14px; max-width: 130px; } .habibi-desktop .habibi-text { font-size: 16px; } }
+    @media (max-width: 600px) {
+      .habibi-desktop { display: none; }
+      .habibi-mobile { display: inline-block; padding: 9px 14px; transform: rotate(-4deg); max-width: none; box-shadow: 0 3px 16px rgba(0,0,0,0.25); margin-top: -28px; margin-bottom: 14px; margin-left: -4px; position: relative; z-index: 2; opacity: 0; animation: habibiMobileFadeIn 0.6s 0.2s ease forwards; }
+      .habibi-mobile .habibi-text { font-size: 14px; }
+      @keyframes habibiMobileFadeIn { from { opacity: 0; transform: rotate(-4deg) translateY(-6px) scale(0.9); } to { opacity: 1; transform: rotate(-4deg) translateY(0) scale(1); } }
+    }
 
     /* HEAT IMPACT SECTION — warm cream editorial layout */
     #heat-impact { padding: 100px 0 110px; background: var(--warm-cream); color: var(--ink); }
@@ -331,6 +349,8 @@
     .wa-float:hover { transform: translateY(-2px); box-shadow: 0 6px 32px rgba(37,211,102,0.45); }
     .wa-float svg { width: 22px; height: 22px; }
 
+
+
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .heat-grid { grid-template-columns: 1fr; }
@@ -407,6 +427,7 @@
 </head>
 <body>
 
+
   <!-- URGENCY BANNER -->
   <div class="offer-banner">
     <span class="heat-icon">☀️</span>
@@ -416,15 +437,30 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">Jan Furnishings</a>
+    <a href="#" class="nav-logo">
+      <span class="nav-brand-main">Blinds For You</span>
+      <span class="nav-brand-sub">by Jan Furnishings</span>
+    </a>
     <a href="#booking" class="nav-cta">Get Free Quote</a>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
+
+    <!-- Quirky habibi badge — desktop/tablet (absolute positioned) -->
+    <div class="habibi-badge habibi-desktop">
+      <div class="habibi-text">Only 4 You, Habibi ♡</div>
+      <div class="habibi-sub">Custom-made in Dubai</div>
+    </div>
+
     <div class="hero-content">
       <div class="hero-offer-strip">
+        <!-- Habibi badge — mobile only, sits inside offer strip -->
+        <div class="habibi-badge habibi-mobile">
+          <div class="habibi-text">Only 4 You, Habibi ♡</div>
+          <div class="habibi-sub">Custom-made in Dubai</div>
+        </div>
         <div class="hos-offer-box">
           <div class="hos-eyebrow">Summer Offer</div>
           <div class="hos-main">Free Installation + Removal</div>
@@ -582,6 +618,8 @@
   <!-- PRODUCTS -->
   <section id="products">
     <div class="container">
+      <!-- MARGIN DOODLES (desktop gutters) -->
+      <!-- BG DOODLES (visible on all screens, behind content) -->
       <div class="section-header" data-aos="fade-up">
         <div class="tag">Our Blinds</div>
         <h2 style="color:var(--gold);">Precision-fitted for Dubai summers.</h2>
@@ -764,7 +802,7 @@
       <!-- Real installation photos for trust -->
       <div style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;max-width:900px;margin-left:auto;margin-right:auto;" data-aos="fade-up">
         <div style="position:relative;overflow:hidden;height:280px;">
-          <img src="assets/images/summer-blinds-works-1.jpg" alt="Jan Furnishings installing blinds" style="width:100%;height:100%;object-fit:cover;" />
+          <img src="assets/images/summer-blinds-works-1.jpg" alt="Blinds For You team installing blinds" style="width:100%;height:100%;object-fit:cover;" />
         </div>
         <div style="position:relative;overflow:hidden;height:280px;">
           <img src="assets/images/summer-blinds-works-2.jpg" alt="Blind installation in progress" style="width:100%;height:100%;object-fit:cover;" />
@@ -928,8 +966,8 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <div class="footer-brand">Jan Furnishings</div>
-          <div class="footer-brand-sub">Custom Blinds &amp; Curtains · Dubai, UAE</div>
+          <div class="footer-brand">Blinds For You</div>
+          <div class="footer-brand-sub">by Jan Furnishings · Custom Blinds &amp; Curtains · Dubai, UAE</div>
         </div>
         <div class="footer-links">
           <a href="https://thejanfurniture.com/products.html">Our Products</a>

@@ -257,6 +257,21 @@
     .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 1000; background: #25D366; color: #fff; padding: 14px 24px; display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 4px 24px rgba(37,211,102,0.35); transition: transform 0.2s, box-shadow 0.2s; }
     .wa-float:hover { transform: translateY(-2px); box-shadow: 0 6px 32px rgba(37,211,102,0.45); }
     .wa-float svg { width: 22px; height: 22px; }
+    /* HABIBI BADGE */
+    .habibi-badge { background: var(--gold); color: var(--charcoal); padding: 14px 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.3); max-width: 160px; text-align: center; }
+    .habibi-badge .habibi-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; font-style: italic; line-height: 1.2; }
+    .habibi-badge .habibi-sub { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 4px; opacity: 0.5; }
+    .habibi-desktop { position: absolute; top: 130px; left: 40px; z-index: 3; transform: rotate(-5deg); opacity: 0; animation: habibiFadeIn 0.8s 0.2s ease forwards; }
+    .habibi-mobile { display: none; }
+    @keyframes habibiFadeIn { from { opacity: 0; transform: rotate(-5deg) translateY(-10px) scale(0.95); } to { opacity: 1; transform: rotate(-5deg) translateY(0) scale(1); } }
+    @media (max-width: 900px) { .habibi-desktop { top: 120px; left: 20px; padding: 10px 14px; max-width: 130px; } .habibi-desktop .habibi-text { font-size: 16px; } }
+    @media (max-width: 600px) {
+      .habibi-desktop { display: none; }
+      .habibi-mobile { display: inline-block; padding: 9px 14px; transform: rotate(-4deg); max-width: none; box-shadow: 0 3px 16px rgba(0,0,0,0.25); margin-top: -28px; margin-bottom: 14px; margin-left: -4px; position: relative; z-index: 2; opacity: 0; animation: habibiMobileFadeIn 0.6s 0.2s ease forwards; }
+      .habibi-mobile .habibi-text { font-size: 14px; }
+      @keyframes habibiMobileFadeIn { from { opacity: 0; transform: rotate(-4deg) translateY(-6px) scale(0.9); } to { opacity: 1; transform: rotate(-4deg) translateY(0) scale(1); } }
+    }
+
     /* RESPONSIVE — 900px */
     @media (max-width: 900px) {
       .container { padding: 0 20px; }
@@ -342,8 +357,20 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
+
+    <!-- Habibi badge — desktop -->
+    <div class="habibi-badge habibi-desktop">
+      <div class="habibi-text">Just 4 You, Habibi ♡</div>
+      <div class="habibi-sub">Custom-made in Dubai</div>
+    </div>
+
     <div class="hero-content">
       <div class="hero-offer-strip">
+        <!-- Habibi badge — mobile -->
+        <div class="habibi-badge habibi-mobile">
+          <div class="habibi-text">Just 4 You, Habibi ♡</div>
+          <div class="habibi-sub">Custom-made in Dubai</div>
+        </div>
         <div class="hos-offer-box">
           <div class="hos-eyebrow">Move-In Package</div>
           <div class="hos-main">Free Installation + Removal</div>
