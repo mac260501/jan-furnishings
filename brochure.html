@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jan Furnishings Brochure</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --charcoal: #2C2C2C;
+    --gold: #C9A96E;
+    --cream: #F2EDE6;
+    --warm-white: #FAFAF7;
+    --light-gold: #E8D5B0;
+    --pale-gold: #F5ECD9;
+    --soft-gray: #9A9A9A;
+    --medium-gray: #5A5A5A;
+  }
+  
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .brochure {
+    width: 794px;
+    height: 1123px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+  
+  /* === HERO === */
+  .hero {
+    height: 310px;
+    background: var(--charcoal);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .hero-left {
+    width: 45%;
+    padding: 44px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-right {
+    width: 55%;
+    position: relative;
+  }
+  
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    background: linear-gradient(to right, var(--charcoal), transparent);
+    z-index: 1;
+  }
+  
+  .gold-bar-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gold);
+    z-index: 5;
+  }
+  
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: var(--gold);
+    line-height: 1.1;
+  }
+  
+  .brand-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 14px 0;
+    opacity: 0.7;
+  }
+  
+  .brand-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--cream);
+    letter-spacing: 1px;
+  }
+  
+  .brand-locations {
+    font-size: 13px;
+    color: var(--soft-gray);
+    margin-top: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* === SERVICES === */
+  .services {
+    padding: 26px 36px 18px;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--charcoal);
+  }
+  
+  .section-header .underline {
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 8px auto 0;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+  
+  .service-card-body {
+    padding: 14px 16px 16px;
+  }
+  
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+  
+  .service-card p {
+    font-size: 12px;
+    color: var(--medium-gray);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  
+  .service-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--gold);
+    background: var(--pale-gold);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  
+  /* === STATS === */
+  .stats-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 36px;
+    background: white;
+    margin: 0 36px;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  }
+  
+  .stat { text-align: center; }
+  
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--gold);
+  }
+  
+  .stat-label {
+    font-size: 11px;
+    color: var(--soft-gray);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* === HOW IT WORKS === */
+  .how-it-works {
+    padding: 22px 36px 14px;
+  }
+  
+  .steps {
+    display: flex;
+    gap: 14px;
+    margin-top: 16px;
+  }
+  
+  .step {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--light-gold);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 3px;
+  }
+  
+  .step-content p {
+    font-size: 11.5px;
+    color: var(--soft-gray);
+    line-height: 1.45;
+  }
+  
+  /* === FURNISHING NOTE === */
+  .furnishing-note {
+    text-align: center;
+    padding: 6px 36px 8px;
+    font-size: 12.5px;
+    color: var(--soft-gray);
+    font-style: italic;
+  }
+  
+  .furnishing-note span {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 500;
+  }
+  
+  /* === CTA FOOTER === */
+  .cta-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 115px;
+    background: var(--charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+  
+  .cta-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+  }
+  
+  .cta-left { text-align: center; }
+  
+  .cta-left h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  
+  .cta-left p {
+    font-size: 13px;
+    color: var(--cream);
+  }
+  
+  .cta-right { text-align: center; }
+  
+  .cta-phone {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+  
+  .cta-web {
+    font-size: 13px;
+    color: var(--soft-gray);
+    margin-top: 4px;
+  }
+  
+  .cta-whatsapp {
+    display: inline-block;
+    margin-top: 6px;
+    background: #25D366;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="brochure">
+  <div class="gold-bar-top"></div>
+  
+  <div class="hero">
+    <div class="hero-left">
+      <div class="brand-name">Jan<br>Furnishings</div>
+      <div class="brand-divider"></div>
+      <div class="brand-tagline">Custom Curtains & Blinds</div>
+      <div class="brand-locations">Dubai &bull; Abu Dhabi &bull; Sharjah</div>
+    </div>
+    <div class="hero-right">
+      <img src="curtains-bg.jpg" alt="Luxury curtains with Dubai skyline view">
+    </div>
+  </div>
+  
+  <div class="services">
+    <div class="section-header">
+      <h2>What We Offer</h2>
+      <div class="underline"></div>
+    </div>
+    
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="curtains-bg.jpg" alt="Custom curtains with Burj Khalifa view">
+        <div class="service-card-body">
+          <h3>Custom Curtains</h3>
+          <p>Sheer, blackout & combo curtains in 100+ premium fabrics. Made to measure.</p>
+          <span class="service-tag">Sheer &bull; Blackout &bull; Motorized</span>
+        </div>
+      </div>
+      
+      <div class="service-card">
+        <img src="blinds-bg.jpg" alt="Modern roller blinds with Dubai skyline">
+        <div class="service-card-body">
+          <h3>Custom Blinds</h3>
+          <p>Roller, wooden & blackout blinds with UV-blocking fabrics for the UAE.</p>
+          <span class="service-tag">Roller &bull; Wooden &bull; Motorized</span>
+        </div>
+      </div>
+      
+      <div class="service-card">
+        <img src="furnishing-bg.png" alt="Luxury furnished living room">
+        <div class="service-card-body">
+          <h3>Home Furnishing</h3>
+          <p>Complete window packages for new homes. One visit, one quote, done.</p>
+          <span class="service-tag">Packages from AED 3,500</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-number">500+</div>
+      <div class="stat-label">Homes Fitted</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">5 ★</div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">48hr</div>
+      <div class="stat-label">Avg. Turnaround</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Free</div>
+      <div class="stat-label">Home Consultation</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">7</div>
+      <div class="stat-label">Days a Week</div>
+    </div>
+  </div>
+  
+  <div class="how-it-works">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Book</h4>
+          <p>WhatsApp us to schedule your free home visit</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Measure</h4>
+          <p>We visit with 20+ fabric books and measure every window</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Make</h4>
+          <p>Custom manufacturing — most orders ready in 5 days</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Install</h4>
+          <p>Professional installation, old fittings removed free</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="furnishing-note">
+    <span>Also available:</span> Wall panels, wallpaper & renovation through <span>Jan Interiors</span>
+  </div>
+  
+  <div class="cta-footer">
+    <div class="cta-left">
+      <h3>Transform Your Home</h3>
+      <p>Free consultation &bull; Same-week installation</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-phone">+971 50 880 6292</div>
+      <div class="cta-web">thejanfurniture.com</div>
+      <div class="cta-whatsapp">WHATSAPP US NOW</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

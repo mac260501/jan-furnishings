@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'DM Sans', sans-serif; }
+  .post {
+    width: 1080px; height: 1080px;
+    position: relative;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  /* Full background image — dimmed */
+  .bg-img {
+    position: absolute; inset: 0;
+    background: url('curtains-bg.jpg') center/cover no-repeat;
+  }
+  /* Subtle dark wash over everything */
+  .bg-wash {
+    position: absolute; inset: 0;
+    background: rgba(10,8,6,0.35);
+  }
+
+  .content { position: relative; z-index: 2; display: flex; flex-direction: column; height: 100%; }
+
+  /* TOP BAR — logo + sticker with translucent backing */
+  .top-bar {
+    padding: 40px 52px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+  }
+  .brand-wrap {
+    background: rgba(10,8,6,0.65);
+    backdrop-filter: blur(12px);
+    padding: 18px 28px;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 54px; font-weight: 700;
+    color: #fff; line-height: 1.0;
+  }
+  .brand-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; letter-spacing: 0.2em;
+    color: rgba(201,169,110,0.8);
+    text-transform: uppercase; margin-top: 4px;
+  }
+  .habibi-sticker {
+    background: #C9A96E; color: #1A1816;
+    padding: 22px 32px;
+    transform: rotate(-5deg);
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+  .habibi-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 600;
+    font-style: italic; line-height: 1.15;
+  }
+  .habibi-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; margin-top: 5px; opacity: 0.5;
+  }
+
+  /* MAIN TEXT — translucent panel */
+  .main {
+    flex: 1;
+    padding: 0 52px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+  }
+  .text-panel {
+    background: rgba(10,8,6,0.7);
+    backdrop-filter: blur(16px);
+    padding: 44px 48px;
+  }
+  .eyebrow {
+    font-size: 15px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: #C47A32; margin-bottom: 18px;
+  }
+  .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 90px; font-weight: 700;
+    color: #FFFFFF; line-height: 0.92;
+    margin-bottom: 14px;
+  }
+  .headline em {
+    color: #C9A96E; font-style: italic;
+    font-size: 98px;
+  }
+  .headline .small-line {
+    font-size: 50px; display: block;
+    color: rgba(255,255,255,0.7);
+    font-weight: 400; margin-top: 10px;
+  }
+  .subtext {
+    font-size: 18px; color: rgba(255,255,255,0.5);
+    line-height: 1.6; max-width: 600px; margin-top: 10px;
+  }
+  .stats-row {
+    display: flex; gap: 52px; margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(201,169,110,0.2);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px; font-weight: 600;
+    color: #C9A96E; line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-top: 2px;
+  }
+
+  /* OFFER STRIP */
+  .offer-strip {
+    background: #C9A96E;
+    padding: 30px 52px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .offer-main { color: #1A1816; }
+  .offer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 700; line-height: 1.1;
+  }
+  .offer-detail {
+    font-size: 13px; font-weight: 500;
+    opacity: 0.55; margin-top: 3px; letter-spacing: 0.04em;
+  }
+  .offer-cta {
+    background: #1A1816; color: #C9A96E;
+    padding: 16px 34px;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    border: none; white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div class="post">
+  <div class="bg-img"></div>
+  <div class="bg-wash"></div>
+
+  <div class="content">
+    <div class="top-bar">
+      <div class="brand-wrap">
+        <div class="brand">Curtains4U</div>
+        <div class="brand-sub">by Jan Furnishings</div>
+      </div>
+      <div class="habibi-sticker">
+        <div class="habibi-text">Made 4 You,<br>Habibi ♡</div>
+        <div class="habibi-sub">Custom-made in Dubai</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="text-panel">
+        <div class="eyebrow">☀️ Summer starts in 3 weeks</div>
+        <div class="headline">
+          <em>Habibi,</em> your curtains
+          <span class="small-line">can't handle Dubai summer.</span>
+        </div>
+        <div class="subtext">
+          Custom blackout & sheer curtains that block 85% of heat. We visit, measure, make & install — free.
+        </div>
+        <div class="stats-row">
+          <div>
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Homes Fitted</div>
+          </div>
+          <div>
+            <div class="stat-num">48hr</div>
+            <div class="stat-label">Turnaround</div>
+          </div>
+          <div>
+            <div class="stat-num">5★</div>
+            <div class="stat-label">Google Rated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-strip">
+      <div class="offer-main">
+        <div class="offer-title">Free Installation + Removal</div>
+        <div class="offer-detail">Book before May 15 · WhatsApp us now</div>
+      </div>
+      <div class="offer-cta">Book Free Visit →</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
