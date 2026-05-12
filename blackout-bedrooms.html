@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Jan Furnishings — Real Blackout. Real Sleep.</title>
+<meta name="description" content="Custom blackout curtains for Dubai bedrooms — fitted to the millimetre, so no light gets in. Free home visit across Dubai, Abu Dhabi, Sharjah." />
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W2DJLPY4HR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W2DJLPY4HR');
+  gtag('config', 'AW-1391650837');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   JAN FURNISHINGS — SHARED DESIGN SYSTEM
+   ============================================================ */
+
+:root {
+  --jf-charcoal: #0F0F0F;
+  --jf-charcoal-2: #161616;
+  --jf-charcoal-3: #1f1d1b;
+  --jf-cream: #F2EDE6;
+  --jf-cream-2: #ECE5DB;
+  --jf-gold: #C9A96E;
+  --jf-gold-soft: #b09053;
+  --jf-text-light: #F5F1EA;
+  --jf-text-light-dim: #9c958a;
+  --jf-text-dark: #1A1A1A;
+  --jf-text-dark-dim: #5a554e;
+  --jf-rule-dark: #2a2724;
+  --jf-rule-light: #d9d2c5;
+}
+
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+html { scroll-behavior: smooth; }
+html, body { background: var(--jf-charcoal); color: var(--jf-text-light); }
+
+section[id], div[id] { scroll-margin-top: 88px; }
+
+.cta-gold:focus-visible,
+.cta-ghost-light:focus-visible,
+.cta-ghost-dark:focus-visible,
+.wa-floater:focus-visible {
+  outline: 2px solid var(--jf-gold);
+  outline-offset: 3px;
+}
+.jf-input:focus-visible { outline: 2px solid var(--jf-gold); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .cta-gold, .cta-ghost-light, .cta-ghost-dark, .wa-floater { transition: none !important; }
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.font-display { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: -0.01em; }
+.font-display-bold { font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: -0.015em; }
+.font-body { font-family: 'DM Sans', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cta-gold {
+  background: var(--jf-gold);
+  color: var(--jf-charcoal);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 24px;
+  border-radius: 2px;
+  transition: background .25s ease, transform .25s ease;
+  cursor: pointer;
+  border: none;
+}
+.cta-gold:hover { background: #d6b780; transform: translateY(-1px); }
+.cta-gold:active { transform: translateY(0); }
+
+.cta-ghost-light {
+  border: 1px solid rgba(245,241,234,.25);
+  color: var(--jf-text-light);
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 15px 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color .25s ease, background .25s ease;
+}
+.cta-ghost-light:hover { border-color: var(--jf-gold); background: rgba(201,169,110,.06); }
+
+.cta-ghost-dark {
+  border: 1px solid rgba(26,26,26,.25);
+  color: var(--jf-text-dark);
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 15px 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color .25s ease, background .25s ease;
+}
+.cta-ghost-dark:hover { border-color: var(--jf-gold); background: rgba(201,169,110,.08); }
+
+.hairline-gold { height: 1px; background: var(--jf-gold); display: inline-block; }
+
+.bg-cream {
+  background-color: var(--jf-cream);
+  background-image:
+    radial-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,.018) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+  color: var(--jf-text-dark);
+}
+
+.photo-slot {
+  position: relative;
+  display: flex; align-items: flex-end; justify-content: flex-start;
+  overflow: hidden;
+  isolation: isolate;
+}
+.photo-slot::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 1px, transparent 1px 14px),
+    linear-gradient(180deg, var(--slot-c1, #1a1916) 0%, var(--slot-c2, #0a0a0a) 100%);
+}
+.photo-slot::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(120% 60% at 50% 0%, var(--slot-glow, rgba(255,255,255,.06)) 0%, transparent 60%);
+}
+.photo-slot__label {
+  position: relative; z-index: 2;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  padding: 12px 14px;
+  background: rgba(0,0,0,.35);
+  border-left: 1px solid var(--jf-gold);
+}
+.photo-slot--cream .photo-slot__label {
+  color: rgba(26,26,26,.6);
+  background: rgba(255,255,255,.45);
+}
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s ease, transform .9s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .08s; }
+.reveal-delay-2 { transition-delay: .16s; }
+.reveal-delay-3 { transition-delay: .24s; }
+.reveal-delay-4 { transition-delay: .32s; }
+
+.jf-header {
+  position: sticky; top: 0; z-index: 40;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(245,241,234,.06);
+}
+
+.jf-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: var(--jf-text-light);
+  line-height: 1;
+}
+.jf-logo small {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: 0.32em;
+  color: var(--jf-gold);
+  margin-top: 3px;
+}
+
+.jf-input {
+  width: 100%;
+  background: var(--jf-cream);
+  color: var(--jf-text-dark);
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(26,26,26,.22);
+  padding: 14px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  border-radius: 0;
+  transition: border-color .2s ease, background .2s ease;
+}
+.jf-input:focus { outline: none; border-bottom-color: var(--jf-gold); background: #fff; }
+.jf-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--jf-text-dark-dim);
+  margin-bottom: 6px;
+}
+
+.mobile-cta-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  background: rgba(15,15,15,.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(245,241,234,.08);
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  display: none;
+}
+.mobile-cta-bar .cta-gold,
+.mobile-cta-bar .cta-ghost-light {
+  min-height: 48px;
+}
+@media (max-width: 768px) {
+  .mobile-cta-bar { display: flex; gap: 8px; }
+  body { padding-bottom: 84px; }
+  .h-display { font-size: clamp(36px, 9vw, 56px); line-height: 1.04; }
+}
+
+.wa-floater {
+  position: fixed; right: 22px; bottom: 22px; z-index: 45;
+  background: #25D366; color: #fff;
+  width: 56px; height: 56px; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transition: transform .2s ease;
+}
+.wa-floater:hover { transform: scale(1.05); }
+@media (max-width: 768px) { .wa-floater { display: none; } }
+
+.rule-gold { width: 36px; height: 1px; background: var(--jf-gold); display: block; }
+.rule-gold-center { margin: 0 auto; }
+
+.faq-item { border-bottom: 1px solid var(--jf-rule-dark); }
+.bg-cream .faq-item { border-bottom-color: var(--jf-rule-light); }
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 22px 0;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+.faq-icon { flex-shrink: 0; width: 20px; height: 20px; position: relative; }
+.faq-icon::before, .faq-icon::after {
+  content: ""; position: absolute; background: currentColor;
+}
+.faq-icon::before { left: 0; right: 0; top: 50%; height: 1px; transform: translateY(-50%); }
+.faq-icon::after { top: 0; bottom: 0; left: 50%; width: 1px; transform: translateX(-50%); transition: transform .25s ease; }
+.faq-item[open] .faq-icon::after { transform: translateX(-50%) scaleY(0); }
+.faq-a {
+  padding: 0 0 24px 0;
+  font-size: 15px; line-height: 1.65;
+  color: var(--jf-text-light-dim);
+  max-width: 60ch;
+}
+.bg-cream .faq-a { color: var(--jf-text-dark-dim); }
+
+.stars { letter-spacing: 2px; color: var(--jf-gold); font-size: 14px; }
+
+.container-jf { max-width: 1240px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+@media (min-width: 768px) { .container-jf { padding-left: 48px; padding-right: 48px; } }
+
+.section-pad { padding-top: 72px; padding-bottom: 72px; }
+@media (min-width: 768px) { .section-pad { padding-top: 120px; padding-bottom: 120px; } }
+
+.section-pad-sm { padding-top: 56px; padding-bottom: 56px; }
+@media (min-width: 768px) { .section-pad-sm { padding-top: 88px; padding-bottom: 88px; } }
+
+.h-display {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.h-section {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+.h-card {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.lede {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--jf-text-light-dim);
+}
+.bg-cream .lede { color: var(--jf-text-dark-dim); }
+
+em.italic-soft { font-style: italic; color: var(--jf-gold); font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+.trust-strip {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+  background: var(--jf-rule-dark);
+  border-top: 1px solid var(--jf-rule-dark);
+  border-bottom: 1px solid var(--jf-rule-dark);
+}
+@media (min-width: 768px) { .trust-strip { grid-template-columns: repeat(4, 1fr); } }
+.trust-cell {
+  background: var(--jf-charcoal);
+  padding: 22px 18px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+}
+.trust-cell .num { font-family: 'Cormorant Garamond', serif; font-size: 32px; line-height: 1; color: var(--jf-gold); }
+.trust-cell .lbl { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--jf-text-light-dim); }
+
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--jf-gold);
+}
+
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.pill .dot { width: 6px; height: 6px; background: var(--jf-gold); border-radius: 999px; }
+
+footer.jf-footer {
+  background: #080808;
+  color: var(--jf-text-light-dim);
+  border-top: 1px solid var(--jf-rule-dark);
+}
+footer.jf-footer a:hover { color: var(--jf-gold); }
+
+/* ============================================================
+   PAGE-SPECIFIC STYLES
+   ============================================================ */
+  /* Page 2 — Sleep Through the Sun: intimate, hushed, low-light editorial */
+
+  body { background: #0a0908; }
+  .bg-night { background: #0a0908; }
+  .bg-night-2 { background: #131110; }
+
+  /* Slot palettes — warmer, dimmer, lamp-light pools */
+  .slot-bedroom-dim {
+    --slot-c1: #1a1310;
+    --slot-c2: #07060a;
+    --slot-glow: rgba(216,160,90,.10);
+  }
+  .slot-bedroom-warm {
+    --slot-c1: #221813;
+    --slot-c2: #0c0a09;
+    --slot-glow: rgba(255,200,140,.14);
+  }
+  .slot-cream-fabric {
+    --slot-c1: #cabfac;
+    --slot-c2: #a8997c;
+    --slot-glow: rgba(255,250,235,.5);
+  }
+
+  /* Hero — quiet envelope. Vertical layout, generous breathing room */
+  .hero-sleep {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #0a0908;
+  }
+  @media (min-width: 1024px) {
+    .hero-sleep { grid-template-columns: 1fr 1fr; min-height: 760px; }
+  }
+
+  .hero-sleep__copy {
+    padding: 80px 24px 56px;
+    display: flex; flex-direction: column; justify-content: center;
+    order: 2;
+  }
+  @media (min-width: 1024px) {
+    .hero-sleep__copy { padding: 100px 72px; order: 1; }
+  }
+
+  .hero-sleep__photo {
+    position: relative;
+    min-height: 380px;
+    order: 1;
+  }
+  @media (min-width: 1024px) { .hero-sleep__photo { order: 2; min-height: 100%; } }
+
+  /* Light meter — visual showing 99% block */
+  .light-meter {
+    display: flex; align-items: stretch;
+    border-top: 1px solid var(--jf-rule-dark);
+    border-bottom: 1px solid var(--jf-rule-dark);
+    margin: 32px 0;
+    padding: 22px 0;
+    gap: 28px;
+  }
+  .light-meter > div { display: flex; flex-direction: column; gap: 4px; }
+  .light-meter .lbl {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--jf-text-light-dim);
+  }
+  .light-meter .val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px; line-height: 1; color: var(--jf-gold);
+  }
+  .light-meter .sub { font-size: 11px; color: var(--jf-text-light-dim); }
+
+  /* Section title — bigger and quieter */
+  .h-quiet {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  /* Why card — three vertically stacked moments */
+  .moment-card {
+    border-top: 1px solid var(--jf-rule-dark);
+    padding: 40px 0 36px;
+    display: grid; grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 768px) {
+    .moment-card { grid-template-columns: 200px 1fr 1fr; gap: 48px; align-items: start; }
+  }
+  .moment-card__eye {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--jf-gold);
+  }
+  .moment-card__head {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.1;
+  }
+  .moment-card__body {
+    font-size: 15px; line-height: 1.7;
+    color: var(--jf-text-light-dim);
+    max-width: 44ch;
+  }
+
+  /* Cream editorial — large quote slabs */
+  .editorial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.8vw, 44px);
+    line-height: 1.25;
+    color: var(--jf-text-dark);
+    max-width: 24ch;
+  }
+
+  /* Light-leak diagram (CSS only, simple shapes) */
+  .leak-diagram {
+    position: relative;
+    aspect-ratio: 4/3;
+    border: 1px solid currentColor;
+    overflow: hidden;
+  }
+  .leak-diagram .frame {
+    position: absolute; inset: 18px;
+    background: #0a0908;
+    border: 1px solid currentColor;
+  }
+  .leak-diagram .leak {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(255,210,140,.7), rgba(255,210,140,0));
+    pointer-events: none;
+  }
+  .leak-diagram .leak.t { top: 18px; left: 18px; right: 18px; height: 4px; background: linear-gradient(180deg, rgba(255,210,140,.7), rgba(255,210,140,0)); }
+  .leak-diagram .leak.l { top: 18px; bottom: 18px; left: 18px; width: 4px; }
+  .leak-diagram .leak.r { top: 18px; bottom: 18px; right: 18px; width: 4px; transform: scaleX(-1); }
+  .leak-diagram .leak.b { bottom: 18px; left: 18px; right: 18px; height: 4px; background: linear-gradient(0deg, rgba(255,210,140,.7), rgba(255,210,140,0)); }
+  .leak-diagram .lbl {
+    position: absolute;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,210,140,.85);
+  }
+  .leak-diagram--solved .leak { display: none; }
+  .leak-diagram--solved .frame { background: #050403; }
+
+  /* System card */
+  .system-card {
+    background: var(--jf-charcoal-2);
+    border: 1px solid var(--jf-rule-dark);
+    padding: 0;
+    display: flex; flex-direction: column;
+    transition: border-color .3s ease, background .3s ease;
+  }
+  .system-card:hover { border-color: var(--jf-gold); }
+  .system-card .photo-slot { aspect-ratio: 3/4; }
+  .system-card__body { padding: 26px 26px 30px; display: flex; flex-direction: column; gap: 12px; }
+  .system-card__num { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--jf-gold); letter-spacing: 0.16em; }
+  .system-card__title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; line-height: 1.18; }
+  .system-card__desc { font-size: 14px; color: var(--jf-text-light-dim); line-height: 1.6; }
+  .system-card__price { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--jf-gold); margin-top: 8px; }
+
+  /* Big quote testimonial */
+  .big-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.8vw, 44px);
+    line-height: 1.28;
+    color: var(--jf-text-light);
+  }
+  .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 84px; line-height: 0.8;
+    color: var(--jf-gold);
+  }
+
+  /* Time table for "schedule" of motorised curtains */
+  .schedule-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .schedule-table th, .schedule-table td {
+    text-align: left; padding: 14px 0; border-bottom: 1px solid var(--jf-rule-dark);
+    font-size: 14px;
+  }
+  .schedule-table th {
+    font-family: 'DM Sans', sans-serif; font-weight: 500;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--jf-text-light-dim);
+  }
+  .schedule-table td:first-child { font-family: 'JetBrains Mono', monospace; color: var(--jf-gold); width: 110px; }
+
+  /* Step row */
+  .step-row { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+  @media (min-width: 768px) { .step-row { grid-template-columns: 80px 1fr 1fr; gap: 40px; } }
+  .step-row + .step-row { border-top: 1px solid var(--jf-rule-light); padding-top: 32px; margin-top: 32px; }
+  .bg-night .step-row + .step-row { border-top-color: var(--jf-rule-dark); }
+</style>
+</head>
+<body data-page="blackout-bedrooms">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What's the difference between blackout and room darkening?","acceptedAnswer":{"@type":"Answer","text":"Room-darkening fabric blocks roughly 80–95% of light. True blackout blocks 99–100% and has a coated lining. Plus the install matters — even blackout fabric leaks if the curtain is cut narrow or hung short."}},
+  {"@type":"Question","name":"Do you have curtains that block light from the sides too?","acceptedAnswer":{"@type":"Answer","text":"Yes. We measure with side returns and over-length drop so curtains overlap the wall on both sides and pool at the floor. That's how you eliminate the side and bottom light strips."}},
+  {"@type":"Question","name":"Can I get blackout curtains for a kid's room with a fun fabric?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We add a separate blackout lining behind your chosen face fabric. The room looks bright and cheerful. The room sleeps pitch black."}},
+  {"@type":"Question","name":"How long does installation take?","acceptedAnswer":{"@type":"Answer","text":"Half a day for a typical bedroom. Most clients book a Saturday morning slot and have everything hanging by lunch."}},
+  {"@type":"Question","name":"Are motorised curtains worth it?","acceptedAnswer":{"@type":"Answer","text":"For one or two bedrooms with a daily routine, yes — schedule a gentle wake-up open and a hard close at bedtime. Worth it for shift workers and parents. Probably not for guest rooms."}}
+]}
+</script>
+
+<!-- ============== HEADER ============== -->
+<header class="jf-header" style="background: rgba(10,9,8,.78);">
+  <div class="container-jf" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
+    <a href="https://thejanfurniture.com" class="jf-logo">JAN<small>FURNISHINGS</small></a>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="tel:+971508806292" class="hidden md:inline-flex" style="font-size:13px;color:var(--jf-text-light-dim);letter-spacing:.05em;">+971 50 880 6292</a>
+      <a href="https://wa.me/971508806292?text=Hi%20Jan%20Furnishings%2C%20I%27d%20like%20a%20free%20home%20visit%20for%20blackout%20curtains."
+         class="cta-gold" style="padding:11px 18px;font-size:13px;" data-track="header_wa">
+        <span style="width:6px;height:6px;background:currentColor;border-radius:50%;"></span>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<section class="hero-sleep">
+  <div class="hero-sleep__copy">
+    <div class="reveal in">
+      <div class="pill" style="color:var(--jf-text-light-dim);margin-bottom:32px;">
+        <span class="dot"></span>
+        <span>For Dubai bedrooms that don't sleep</span>
+      </div>
+      <h1 class="h-display" style="margin-bottom: 28px; font-weight: 400;">
+        Real <em class="italic-soft">blackout.</em><br/>
+        Real sleep.
+      </h1>
+      <p class="lede" style="max-width:46ch;">
+        Custom blackout curtains for Dubai bedrooms — fitted to the millimetre so no light gets in down the sides, top, or bottom.
+      </p>
+
+      <div class="light-meter">
+        <div>
+          <span class="lbl">Light blocked</span>
+          <span class="val">99%</span>
+          <span class="sub">Coated thermal blackout fabric</span>
+        </div>
+        <div>
+          <span class="lbl">Side & bottom leak</span>
+          <span class="val">0%</span>
+          <span class="sub">Measured returns, over-length drop</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20blackout%20curtains%20for%20my%20bedroom." class="cta-gold" data-track="hero_wa">
+          <span style="font-size:18px;">↗</span>
+          Book Free Home Visit
+        </a>
+        <a href="#systems" class="cta-ghost-light">See the four systems</a>
+      </div>
+
+      <div style="margin-top:36px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
+        <span class="stars">★★★★★</span>
+        <span style="font-size:13px;color:var(--jf-text-light-dim);">Trusted by 500+ Dubai homes · 4.9 on Google</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-sleep__photo">
+    <div class="photo-slot slot-bedroom-dim" style="position:absolute;inset:0;">
+      <div class="photo-slot__label">HERO · dim bedroom, heavy curtains drawn, single lamp pool, sleeper silhouette</div>
+    </div>
+    <!-- a small "exterior" inset showing harsh daylight outside -->
+    <div class="photo-slot slot-bedroom-warm" style="position:absolute;right:20px;top:20px;width:140px;height:90px;border:1px solid var(--jf-gold);z-index:3;">
+      <div class="photo-slot__label" style="font-size:9px;padding:8px;">OUTSIDE · 11AM</div>
+    </div>
+    <div style="position:absolute;right:20px;bottom:20px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--jf-text-light-dim);letter-spacing:.16em;">
+      INSIDE · 0 LUX
+    </div>
+  </div>
+</section>
+
+<!-- ============== TRUST STRIP ============== -->
+<div class="trust-strip">
+  <div class="trust-cell"><span class="num">99%</span><span class="lbl">Light blocked</span></div>
+  <div class="trust-cell"><span class="num">500+</span><span class="lbl">Bedrooms fitted</span></div>
+  <div class="trust-cell"><span class="num">7 days</span><span class="lbl">Measure to install</span></div>
+  <div class="trust-cell"><span class="num">3 cities</span><span class="lbl">Dubai · AD · Sharjah</span></div>
+</div>
+
+<!-- ============== ANSWER PARAGRAPH ============== -->
+<section class="section-pad-sm" style="background:#0a0908;">
+  <div class="container-jf">
+    <div style="max-width:880px;" class="reveal">
+      <div style="display:flex;gap:14px;align-items:center;margin-bottom:24px;">
+        <span class="rule-gold"></span>
+        <span class="eyebrow" style="color:var(--jf-gold);">What we do</span>
+      </div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.45;color:var(--jf-text-light);max-width:64ch;">
+        Jan Furnishings makes true blackout curtains for Dubai bedrooms — 99% light-blocking fabric, custom-cut to your exact windows so no light leaks down the sides. Used by parents with young children, shift workers, and anyone who can't sleep through Dubai daylight. Free home visit, professional installation, usually within a week.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== THREE MOMENTS ============== -->
+<section class="section-pad" id="why">
+  <div class="container-jf">
+    <div style="max-width:720px;margin-bottom:48px;" class="reveal">
+      <span class="eyebrow" style="color:var(--jf-gold);">For three kinds of sleeper</span>
+      <h2 class="h-quiet" style="margin-top:18px;">
+        The dawn doesn't have to win.
+      </h2>
+    </div>
+
+    <div class="moment-card reveal">
+      <div class="moment-card__eye">For your kids</div>
+      <h3 class="moment-card__head">Naps that actually happen.<br/>Bedtime that holds.</h3>
+      <p class="moment-card__body">A five-month-old can sense a 5% rise in light at 5am. We've fitted blackouts in 200+ kids' rooms across Dubai — the parents tell us the same thing every time. <em style="color:var(--jf-gold);">"We got the morning back."</em></p>
+    </div>
+
+    <div class="moment-card reveal">
+      <div class="moment-card__eye">For shift workers</div>
+      <h3 class="moment-card__head">Sleep when your body needs it.<br/>Not when the sun says so.</h3>
+      <p class="moment-card__body">Pilots, ICU nurses, traders on US hours. The right blackout is the difference between five hours of broken sleep and seven hours of the real thing. Your circadian rhythm will notice.</p>
+    </div>
+
+    <div class="moment-card reveal" style="border-bottom: 1px solid var(--jf-rule-dark);">
+      <div class="moment-card__eye">For sensitive sleepers</div>
+      <h3 class="moment-card__head">No glow under the rod.<br/>No strip at the edge.</h3>
+      <p class="moment-card__body">Most "blackout" curtains aren't. The fabric blocks the light — and the side returns let it back in. We measure for full overlap onto the wall and an over-length drop to the floor. Just dark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LIGHT LEAK DIAGRAM (cream editorial) ============== -->
+<section class="section-pad bg-cream">
+  <div class="container-jf">
+    <div style="display:grid;grid-template-columns:1fr;gap:48px;align-items:center;" class="md:grid-cols-2">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--jf-gold-soft);">The fit is the difference</span>
+        <h2 class="h-quiet" style="margin-top:18px;">
+          Most blackout curtains fail at <em class="italic-soft">three points.</em>
+        </h2>
+        <p style="font-size:16px;line-height:1.7;color:var(--jf-text-dark-dim);margin-top:24px;max-width:50ch;">
+          We measure for full side returns onto the wall, an over-length drop that pools at the floor, and a rod that extends 15cm past each frame. The fabric does its job. The install does the rest.
+        </p>
+
+        <ul style="list-style:none;padding:0;margin-top:28px;display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.6;">
+          <li style="display:flex;gap:14px;"><span style="font-family:'JetBrains Mono',monospace;color:var(--jf-gold-soft);">01</span><span><strong>Top spill.</strong> Track sits flush to ceiling; fabric returns over the box.</span></li>
+          <li style="display:flex;gap:14px;"><span style="font-family:'JetBrains Mono',monospace;color:var(--jf-gold-soft);">02</span><span><strong>Side strips.</strong> Curtain wraps 8–10cm onto the wall, each side.</span></li>
+          <li style="display:flex;gap:14px;"><span style="font-family:'JetBrains Mono',monospace;color:var(--jf-gold-soft);">03</span><span><strong>Floor gap.</strong> Cut 2cm long. Fabric kisses the floor. No glow underneath.</span></li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-delay-1" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+        <div>
+          <div class="leak-diagram" style="color: var(--jf-text-dark);">
+            <div class="frame"></div>
+            <div class="leak t"></div>
+            <div class="leak b"></div>
+            <div class="leak l"></div>
+            <div class="leak r"></div>
+            <span class="lbl" style="top:6px;left:50%;transform:translateX(-50%);color:#b78d4a;">— TYPICAL FIT —</span>
+          </div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--jf-text-dark-dim);margin-top:10px;text-align:center;">Light leaks · 4 edges</p>
+        </div>
+        <div>
+          <div class="leak-diagram leak-diagram--solved" style="color: var(--jf-text-dark);">
+            <div class="frame"></div>
+            <span class="lbl" style="top:6px;left:50%;transform:translateX(-50%);color:var(--jf-gold-soft);">— JAN FIT —</span>
+          </div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--jf-text-dark-dim);margin-top:10px;text-align:center;">Zero · sealed dark</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHAT WE DO — FOUR SYSTEMS ============== -->
+<section class="section-pad bg-night" id="systems">
+  <div class="container-jf">
+    <div style="display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:48px;" class="reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--jf-gold);">Four blackout systems</span>
+        <h2 class="h-quiet" style="margin-top:18px;">From simple curtain to full motorised dark.</h2>
+      </div>
+      <p class="lede" style="max-width:36ch;">We'll bring fabric samples — and a black-box light meter — to your home.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:20px;" class="md:grid-cols-2 lg:grid-cols-4">
+      <div class="system-card reveal">
+        <div class="photo-slot slot-bedroom-dim">
+          <div class="photo-slot__label">100% blackout · heavy lined drape</div>
+        </div>
+        <div class="system-card__body">
+          <span class="system-card__num">SYSTEM · 01</span>
+          <h3 class="system-card__title">100% Blackout Curtains</h3>
+          <p class="system-card__desc">Heavy lined, 99% light-blocking. The classic, the workhorse, the most popular choice.</p>
+          <span class="system-card__price">From AED 500 /window</span>
+        </div>
+      </div>
+      <div class="system-card reveal reveal-delay-1">
+        <div class="photo-slot slot-bedroom-dim">
+          <div class="photo-slot__label">Roller + curtain layered system</div>
+        </div>
+        <div class="system-card__body">
+          <span class="system-card__num">SYSTEM · 02</span>
+          <h3 class="system-card__title">Blackout Roller + Curtain</h3>
+          <p class="system-card__desc">Roller for total dark at the glass. Curtain for warmth and acoustic damping. Belt-and-braces.</p>
+          <span class="system-card__price">From AED 700 /window</span>
+        </div>
+      </div>
+      <div class="system-card reveal reveal-delay-2">
+        <div class="photo-slot slot-bedroom-dim">
+          <div class="photo-slot__label">Two-layer sheer + blackout, one track</div>
+        </div>
+        <div class="system-card__body">
+          <span class="system-card__num">SYSTEM · 03</span>
+          <h3 class="system-card__title">Sheer + Blackout Two-Layer</h3>
+          <p class="system-card__desc">Light when you want it. Dark when you don't. Both on the same track, both yours to choose.</p>
+          <span class="system-card__price">From AED 800 /window</span>
+        </div>
+      </div>
+      <div class="system-card reveal reveal-delay-3">
+        <div class="photo-slot slot-bedroom-dim">
+          <div class="photo-slot__label">Motorised blackout · scheduled wake</div>
+        </div>
+        <div class="system-card__body">
+          <span class="system-card__num">SYSTEM · 04</span>
+          <h3 class="system-card__title">Motorised Blackout</h3>
+          <p class="system-card__desc">Sleep dark. Wake gentle. Schedule on your phone. The most-loved upgrade we sell.</p>
+          <span class="system-card__price">From AED 1,200 /window</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample motorised schedule, as a quiet showpiece -->
+    <div style="display:grid;grid-template-columns:1fr;gap:48px;align-items:start;margin-top:80px;" class="md:grid-cols-2 reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--jf-gold);">A typical motorised week</span>
+        <h3 class="h-quiet" style="margin-top:16px;">Wake gentle.<br/>Sleep absolute.</h3>
+        <p style="font-size:15px;line-height:1.7;color:var(--jf-text-light-dim);margin-top:18px;max-width:42ch;">
+          Set once. Forgotten forever. Adjust by voice or phone.
+        </p>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Time</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>06:45</td><td>Sheer opens · sunrise filters in</td></tr>
+          <tr><td>07:00</td><td>Blackout retracts · gentle wake</td></tr>
+          <tr><td>13:30</td><td>Sheer closes for nap room (kids' setting)</td></tr>
+          <tr><td>21:30</td><td>Blackout closes · pitch dark</td></tr>
+          <tr><td>02:00</td><td>"Hold" — no movement until alarm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BIG TESTIMONIAL ============== -->
+<section class="section-pad bg-cream">
+  <div class="container-jf">
+    <div style="max-width:920px;margin:0 auto;text-align:center;" class="reveal">
+      <span class="quote-mark" style="color:var(--jf-gold-soft);">"</span>
+      <p class="editorial-quote" style="color:var(--jf-text-dark);margin:8px auto 28px;max-width:24ch;">
+        For the first time since the baby was born, she slept till seven. We cried.
+      </p>
+      <div style="font-size:13px;color:var(--jf-text-dark-dim);letter-spacing:.05em;">
+        <strong style="color:var(--jf-text-dark);font-weight:500;">Layla H.</strong> · Apartment · JBR · Two-layer blackout, August 2025
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:32px;margin-top:72px;" class="md:grid-cols-2">
+      <div class="reveal" style="border-top:1px solid var(--jf-rule-light);padding-top:24px;">
+        <span class="stars" style="color:var(--jf-gold-soft);">★★★★★</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.35;margin-top:14px;max-width:36ch;">
+          "I work nights at Mediclinic. Before Jan, I slept badly. Now the room is genuinely pitch dark at 10am. It's not subtle — it's transformative."
+        </p>
+        <div style="font-size:13px;color:var(--jf-text-dark-dim);margin-top:14px;"><strong style="color:var(--jf-text-dark);font-weight:500;">Marc T.</strong> · Townhouse · Mira</div>
+      </div>
+      <div class="reveal reveal-delay-1" style="border-top:1px solid var(--jf-rule-light);padding-top:24px;">
+        <span class="stars" style="color:var(--jf-gold-soft);">★★★★★</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.35;margin-top:14px;max-width:36ch;">
+          "They came back twice to adjust the rod by a centimetre. That's the level of care. The kids' room is now actually dark."
+        </p>
+        <div style="font-size:13px;color:var(--jf-text-dark-dim);margin-top:14px;"><strong style="color:var(--jf-text-dark);font-weight:500;">Priya R.</strong> · Villa · Damac Hills</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;">
+      <a href="https://g.page/janfurnishings" style="font-size:13px;color:var(--jf-gold-soft);letter-spacing:.05em;display:inline-flex;align-items:center;gap:8px;">
+        Read all 280+ Google reviews →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="section-pad bg-night" id="how">
+  <div class="container-jf">
+    <div style="max-width:600px;margin-bottom:48px;" class="reveal">
+      <span class="eyebrow" style="color:var(--jf-gold);">How it works</span>
+      <h2 class="h-quiet" style="margin-top:18px;">From WhatsApp to dark, in one week.</h2>
+    </div>
+
+    <div class="step-row reveal">
+      <div class="step-num">01</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;line-height:1.18;">WhatsApp us</h3>
+      </div>
+      <p style="font-size:14px;color:var(--jf-text-light-dim);line-height:1.7;max-width:42ch;">A photo of the bedroom, a rough idea of what you want. Same-day reply with visit slots.</p>
+    </div>
+    <div class="step-row reveal">
+      <div class="step-num">02</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;line-height:1.18;">Free home visit</h3>
+      </div>
+      <p style="font-size:14px;color:var(--jf-text-light-dim);line-height:1.7;max-width:42ch;">We measure every bedroom window with side returns and over-length drops. Bring fabric and a light meter.</p>
+    </div>
+    <div class="step-row reveal">
+      <div class="step-num">03</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;line-height:1.18;">We make it</h3>
+      </div>
+      <p style="font-size:14px;color:var(--jf-text-light-dim);line-height:1.7;max-width:42ch;">Custom cut, blackout-lined, hand-sewn returns in our Al Quoz workshop. 3–5 working days.</p>
+    </div>
+    <div class="step-row reveal">
+      <div class="step-num">04</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;line-height:1.18;">We install</h3>
+      </div>
+      <p style="font-size:14px;color:var(--jf-text-light-dim);line-height:1.7;max-width:42ch;">Half a day. We hang, we test with our light meter, we don't leave until it reads zero.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FORM ============== -->
+<section class="section-pad bg-night-2" id="form">
+  <div class="container-jf">
+    <div style="display:grid;grid-template-columns:1fr;gap:56px;align-items:start;" class="md:grid-cols-2">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--jf-gold);">Book your free visit</span>
+        <h2 class="h-quiet" style="margin-top:18px;max-width:16ch;">
+          Tell us which rooms need blackout.
+        </h2>
+        <p class="lede" style="margin-top:24px;max-width:44ch;">
+          We'll bring fabric samples to your home — free, no obligation. You'll see the difference before you've signed anything.
+        </p>
+        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+          <a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20blackout%20curtains." class="cta-gold" data-track="form_aside_wa">Or WhatsApp now →</a>
+          <a href="tel:+971508806292" class="cta-ghost-light" data-track="form_aside_call">+971 50 880 6292</a>
+        </div>
+
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--jf-rule-dark);">
+          <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Most-booked add-ons</div>
+          <ul style="font-size:14px;line-height:1.9;list-style:none;padding:0;color:var(--jf-text-light-dim);">
+            <li>· Motorisation on the master bedroom</li>
+            <li>· Two-layer sheer + blackout for the lounge</li>
+            <li>· Kids' room fun fabric with blackout backing</li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="reveal reveal-delay-1" style="background:var(--jf-cream);padding:36px 32px;color:var(--jf-text-dark);" id="lead-form" onsubmit="event.preventDefault();window.handleFormSubmit(this);">
+        <input type="hidden" name="utm_source" value="google" />
+        <input type="hidden" name="utm_medium" value="cpc" />
+        <input type="hidden" name="utm_campaign" value="bedrooms_2026" />
+        <input type="hidden" name="utm_content" value="blackout_bedrooms" />
+        <input type="hidden" name="page" value="blackout-bedrooms" />
+
+        <div style="margin-bottom:22px;">
+          <span class="eyebrow" style="color:var(--jf-gold-soft);">Book my free visit</span>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <label class="jf-label" for="name">Your name</label>
+          <input class="jf-input" type="text" id="name" name="name" required placeholder="Full name" />
+        </div>
+        <div style="margin-bottom:20px;">
+          <label class="jf-label" for="wa">WhatsApp number</label>
+          <input class="jf-input" type="tel" id="wa" name="whatsapp" required placeholder="+971 50 ___ ____" />
+        </div>
+        <div style="margin-bottom:20px;">
+          <label class="jf-label" for="emirate">Emirate</label>
+          <select class="jf-input" id="emirate" name="emirate" required>
+            <option value="">Choose…</option>
+            <option>Dubai</option>
+            <option>Abu Dhabi</option>
+            <option>Sharjah</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div style="margin-bottom:28px;">
+          <label class="jf-label" for="need">Which rooms?</label>
+          <select class="jf-input" id="need" name="need">
+            <option value="">Choose…</option>
+            <option>Master bedroom only</option>
+            <option>All bedrooms</option>
+            <option>Kids' room</option>
+            <option>Shift-worker room — motorised</option>
+            <option>Whole apartment — full home</option>
+          </select>
+        </div>
+
+        <button type="submit" class="cta-gold" style="width:100%;padding:18px;font-size:14px;letter-spacing:.06em;">
+          Book My Free Visit
+          <span style="font-size:18px;">→</span>
+        </button>
+
+        <p style="font-size:11px;color:var(--jf-text-dark-dim);margin-top:18px;line-height:1.5;">
+          We'll only message you about your visit. WhatsApp only — we don't email.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section-pad bg-night" id="faq">
+  <div class="container-jf">
+    <div style="display:grid;grid-template-columns:1fr;gap:48px;" class="md:grid-cols-12">
+      <div class="md:col-span-4 reveal">
+        <span class="eyebrow" style="color:var(--jf-gold);">Questions</span>
+        <h2 class="h-quiet" style="margin-top:18px;">Before you book.</h2>
+      </div>
+      <div class="md:col-span-8 reveal" style="border-top:1px solid var(--jf-rule-dark);">
+        <details class="faq-item">
+          <summary class="faq-q"><span>What's the difference between "blackout" and "room darkening"?</span><span class="faq-icon"></span></summary>
+          <div class="faq-a">Room-darkening fabric blocks roughly 80–95% of light. True blackout blocks 99–100% and has a coated lining. Plus the install matters — even blackout fabric leaks if the curtain is cut narrow or hung short.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><span>Do you have curtains that block light from the sides too?</span><span class="faq-icon"></span></summary>
+          <div class="faq-a">Yes. We measure with 8–10cm side returns and over-length drop so curtains overlap the wall on both sides and pool at the floor. That's how you eliminate the side and bottom light strips.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><span>Can I get blackout curtains for a kid's room with a fun fabric?</span><span class="faq-icon"></span></summary>
+          <div class="faq-a">Absolutely. We add a separate blackout lining behind your chosen face fabric. The room looks bright and cheerful. The room sleeps pitch black. Many parents pick velvet stars or palm patterns for the face.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><span>How long does installation take?</span><span class="faq-icon"></span></summary>
+          <div class="faq-a">Half a day for a typical bedroom. Most clients book a Saturday morning slot and have everything hanging by lunch.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><span>Are motorised curtains worth it?</span><span class="faq-icon"></span></summary>
+          <div class="faq-a">For one or two bedrooms with a daily routine — yes. Schedule a gentle open at sunrise and a hard close at bedtime. Particularly worth it for shift workers and parents of young kids. Probably overkill for guest rooms.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section style="background:#050403;padding:96px 0;">
+  <div class="container-jf">
+    <div style="max-width:840px;margin:0 auto;text-align:center;" class="reveal">
+      <span class="rule-gold rule-gold-center"></span>
+      <h2 class="h-display" style="margin-top:24px;">
+        Bedtime can hold.<br/>
+        <em class="italic-soft">Let it.</em>
+      </h2>
+      <p class="lede" style="margin:24px auto 0;max-width:44ch;">
+        Free home visit. Fabric samples brought to your door. No obligation. Usually fitted within the week.
+      </p>
+      <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:36px;">
+        <a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20blackout%20curtains." class="cta-gold" data-track="final_wa">
+          <span style="font-size:18px;">↗</span>
+          WhatsApp · Book Free Visit
+        </a>
+        <a href="tel:+971508806292" class="cta-ghost-light" data-track="final_call">Call +971 50 880 6292</a>
+      </div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--jf-text-light-dim);margin-top:36px;">
+        OPEN · SAT–THU 9:00–19:00 · FRI BY APPOINTMENT
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="jf-footer" style="padding:64px 0 32px;">
+  <div class="container-jf">
+    <div style="display:grid;grid-template-columns:1fr;gap:48px;" class="md:grid-cols-4">
+      <div>
+        <div class="jf-logo">JAN<small>FURNISHINGS</small></div>
+        <p style="font-size:13px;line-height:1.7;margin-top:18px;max-width:30ch;">Custom curtains, blinds and soft furnishings, made in Al Quoz and fitted across the UAE since 2019.</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Jan Group</div>
+        <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;list-style:none;padding:0;">
+          <li><a href="https://thejanfurniture.com">Jan Furniture (parent)</a></li>
+          <li><a href="https://thejanfurniture.com/upholstery">Jan Upholstery</a></li>
+          <li><a href="https://thejanfurniture.com/joinery">Jan Joinery</a></li>
+          <li><a href="https://thejanfurniture.com/contract">Jan Contract</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Contact</div>
+        <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;list-style:none;padding:0;">
+          <li><a href="tel:+971508806292">+971 50 880 6292</a></li>
+          <li><a href="https://wa.me/971508806292">WhatsApp · Same-day reply</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#076f626b6b6847736f626d6669617275696e737275622964686a"><span class="__cf_email__" data-cfemail="127a777e7e7d52667a7778737c7467607c7b666760773c717d7f">[email&#160;protected]</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Visit</div>
+        <p style="font-size:14px;line-height:1.7;">
+          Showroom + Workshop<br/>
+          Street 7, Al Quoz Industrial 3<br/>
+          Dubai, United Arab Emirates
+        </p>
+      </div>
+    </div>
+    <div style="margin-top:56px;padding-top:24px;border-top:1px solid var(--jf-rule-dark);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--jf-text-light-dim);">
+      <span>© 2026 Jan Furnishings · A Jan Group company</span>
+      <span style="font-family:'JetBrains Mono',monospace;letter-spacing:.12em;">Imagery is illustrative · real project photos shot on visit</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="tel:+971508806292" class="cta-ghost-light" style="flex:1;padding:14px;font-size:13px;" data-track="mobile_call">Call</a>
+  <a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20blackout%20curtains." class="cta-gold" style="flex:2;padding:14px;font-size:13px;" data-track="mobile_wa">
+    <span style="width:6px;height:6px;background:currentColor;border-radius:50%;"></span>
+    WhatsApp · Free Visit
+  </a>
+</div>
+
+<a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20blackout%20curtains%20for%20my%20bedroom." class="wa-floater" aria-label="Chat with Jan Furnishings on WhatsApp" rel="noopener" data-track="floater_wa">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6c.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5s.1-.4 0-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3 2 3.1 4.9 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.querySelectorAll('[data-track]').forEach(el => {
+  el.addEventListener('click', () => {
+    const id = el.dataset.track;
+    if (window.gtag) {
+      gtag('event', 'cta_click', { event_category: 'engagement', event_label: id, page: 'blackout-bedrooms' });
+      gtag('event', 'conversion', { 'send_to': 'AW-1391650837/' + (id.includes('wa') ? 'wa' : 'phone') });
+    }
+  });
+});
+
+window.handleFormSubmit = function(form){
+  const data = new FormData(form);
+  if (window.gtag) {
+    gtag('event', 'generate_lead', { event_category: 'form', event_label: 'blackout-bedrooms' });
+    gtag('event', 'conversion', { 'send_to': 'AW-1391650837/lead' });
+  }
+  const wrap = form.parentElement;
+  form.style.display = 'none';
+  const ok = document.createElement('div');
+  ok.style.cssText = "background:var(--jf-cream);padding:48px 32px;color:var(--jf-text-dark);text-align:center;";
+  ok.innerHTML = `<div class="rule-gold rule-gold-center" style="background:var(--jf-gold-soft);"></div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;margin-top:18px;">Thank you, ${data.get('name')||''}.</h3>
+    <p style="margin-top:12px;font-size:15px;color:var(--jf-text-dark-dim);max-width:36ch;margin-left:auto;margin-right:auto;">We've got your request. We'll WhatsApp you within a few hours with two visit slots.</p>`;
+  wrap.appendChild(ok);
+};
+</script>
+</body>
+</html>
