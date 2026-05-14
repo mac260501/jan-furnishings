@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Jan Furnishings — Make Your Home Feel Like Air-Conditioning</title>
-<meta name="description" content="UV-blocking blinds and thermal curtains custom-made for Dubai's summer. Drop indoor temperatures by 6–8°C. Free home visit across Dubai, Abu Dhabi and Sharjah." />
+<meta name="description" content="UV-blocking blinds and thermal curtains custom-made for Dubai's summer. Drop indoor temperatures by 6–8°C. Free home visit across Dubai." />
 
 <!-- Google tag (gtag.js) — GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2DJLPY4HR"></script>
@@ -16,6 +16,7 @@
   gtag('config', 'AW-1391650837');
 </script>
 
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231A1A1A'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='600' fill='%23C9A96E'%3EJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -41,10 +42,12 @@
   --jf-rule-light: #d9d2c5;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
 * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+a { text-decoration: none; color: inherit; }
 
 html { scroll-behavior: smooth; }
-html, body { background: var(--jf-charcoal); color: var(--jf-text-light); }
+html, body { background: var(--jf-charcoal); color: var(--jf-text-light); margin: 0; }
 
 section[id], div[id] { scroll-margin-top: 88px; }
 
@@ -230,19 +233,24 @@ body {
 
 .mobile-cta-bar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-  background: rgba(15,15,15,.92);
+  background: rgba(15,15,15,.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(245,241,234,.08);
-  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(201,169,110,.15);
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
   display: none;
 }
 .mobile-cta-bar .cta-gold,
 .mobile-cta-bar .cta-ghost-light {
   min-height: 48px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+.mobile-cta-bar .cta-ghost-light {
+  border-color: rgba(245,241,234,.18);
 }
 @media (max-width: 768px) {
-  .mobile-cta-bar { display: flex; gap: 8px; }
+  .mobile-cta-bar { display: flex; gap: 10px; }
   body { padding-bottom: 84px; }
   .h-display { font-size: clamp(36px, 9vw, 56px); line-height: 1.04; }
 }
@@ -250,12 +258,16 @@ body {
 .wa-floater {
   position: fixed; right: 22px; bottom: 22px; z-index: 45;
   background: #25D366; color: #fff;
-  width: 56px; height: 56px; border-radius: 999px;
-  display: flex; align-items: center; justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,.35);
   transition: transform .2s ease;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
 }
-.wa-floater:hover { transform: scale(1.05); }
+.wa-floater:hover { transform: scale(1.03); }
 @media (max-width: 768px) { .wa-floater { display: none; } }
 
 .rule-gold { width: 36px; height: 1px; background: var(--jf-gold); display: block; }
@@ -363,11 +375,26 @@ em.italic-soft { font-style: italic; color: var(--jf-gold); font-family: 'Cormor
 .pill .dot { width: 6px; height: 6px; background: var(--jf-gold); border-radius: 999px; }
 
 footer.jf-footer {
-  background: #080808;
-  color: var(--jf-text-light-dim);
-  border-top: 1px solid var(--jf-rule-dark);
+  background: #111;
+  padding: 64px 0 32px;
+  border-top: 1px solid rgba(255,255,255,.06);
 }
+footer.jf-footer a { color: rgba(255,255,255,.4); transition: color .3s ease; }
 footer.jf-footer a:hover { color: var(--jf-gold); }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--jf-gold); margin-bottom: 4px; }
+.footer-brand-sub { font-size: 12px; color: var(--jf-text-light-dim); letter-spacing: 0.05em; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 13px; }
+.footer-contact { text-align: right; }
+.footer-contact p { font-size: 13px; color: rgba(255,255,255,.4); margin-bottom: 4px; }
+.footer-contact a { color: var(--jf-gold); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; margin-top: 48px; border-top: 1px solid rgba(255,255,255,.06); font-size: 12px; color: rgba(255,255,255,.25); }
+@media (max-width: 768px) {
+  .footer-inner { flex-direction: column; gap: 24px; }
+  .footer-contact { text-align: left; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
 
 /* ============================================================
    PAGE-SPECIFIC STYLES
@@ -404,17 +431,19 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
     .hero-heat__grid { grid-template-columns: 1.15fr 1fr; min-height: 720px; }
   }
   .hero-heat__copy {
-    padding: 56px 24px 48px;
+    padding: 40px 24px 48px;
     display: flex; flex-direction: column; justify-content: center;
     position: relative; z-index: 2;
+    order: 2;
   }
-  @media (min-width: 1024px) { .hero-heat__copy { padding: 80px 64px; } }
+  @media (min-width: 1024px) { .hero-heat__copy { padding: 80px 64px; order: 0; } }
 
   .hero-heat__photo {
     position: relative;
-    min-height: 360px;
+    min-height: 45vh;
+    order: 1;
   }
-  @media (min-width: 1024px) { .hero-heat__photo { min-height: 100%; } }
+  @media (min-width: 1024px) { .hero-heat__photo { min-height: 100%; order: 0; } }
 
   /* Temperature gauge */
   .temp-gauge {
@@ -505,6 +534,34 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
   .bill-row__val { font-family: 'Cormorant Garamond', serif; font-size: 18px; text-align: right; }
   .bill-bar { height: 4px; background: var(--jf-rule-dark); position: relative; overflow: hidden; }
   .bill-bar > span { display: block; height: 100%; background: var(--jf-gold); }
+
+  /* ============================================================
+     RESPONSIVE GRID UTILITIES
+     ============================================================ */
+  .hidden { display: none; }
+
+  @media (min-width: 768px) {
+    .md\:inline-flex { display: inline-flex !important; }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr) !important; }
+    .md\:grid-cols-12 { grid-template-columns: repeat(12, 1fr) !important; }
+    .md\:col-span-4 { grid-column: span 4; }
+    .md\:col-span-8 { grid-column: span 8; }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr) !important; }
+  }
+
+  .photo-slot[style*="background:url"]::before,
+  .photo-slot[style*="background:url"]::after { display: none; }
+
+  /* Nav scroll state */
+  .jf-header.scrolled {
+    background: rgba(15,15,15,.97) !important;
+    box-shadow: 0 1px 24px rgba(0,0,0,.3);
+  }
 </style>
 </head>
 <body data-page="beat-the-heat">
@@ -516,23 +573,24 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
   {"@type":"Question","name":"Which is better for Dubai heat — curtains or blinds?","acceptedAnswer":{"@type":"Answer","text":"For pure heat performance, thermal-lined curtains drop the most degrees because they trap an insulating air layer. Solar blinds keep the view. We usually recommend layering both for south- and west-facing rooms."}},
   {"@type":"Question","name":"Do you have fabrics that block UV without making the room dark?","acceptedAnswer":{"@type":"Answer","text":"Yes — solar roller blind fabrics at 3% and 5% openness block 95–97% of UV while still letting daylight through. You keep the view, you lose the heat."}},
   {"@type":"Question","name":"How long does the whole process take?","acceptedAnswer":{"@type":"Answer","text":"Free home visit usually happens within 48 hours. Manufacturing takes 3–5 working days. Installation is one half-day visit. Total: typically under one week."}},
-  {"@type":"Question","name":"Do you serve Abu Dhabi and Sharjah too?","acceptedAnswer":{"@type":"Answer","text":"Yes. Free home visits across Dubai, Abu Dhabi and Sharjah. Same one-week turnaround."}}
+  {"@type":"Question","name":"Which areas of Dubai do you serve?","acceptedAnswer":{"@type":"Answer","text":"All of Dubai — from the Marina to Arabian Ranches to Jumeirah to Silicon Oasis. Same one-week turnaround wherever you are."}}
 ]}
 </script>
 
 <!-- ============== HEADER ============== -->
 <header class="jf-header" style="background: rgba(15,15,15,.7);">
-  <div class="container-jf" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
-    <a href="https://thejanfurniture.com" class="jf-logo">
-      JAN<small>FURNISHINGS</small>
+  <div class="container-jf" style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px;">
+    <a href="https://thejanfurniture.com" class="jf-logo" style="display:flex;flex-direction:column;line-height:1.1;">
+      <span style="font-size:22px;font-weight:500;">Jan Furnishings</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:9px;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--jf-text-light-dim);margin-top:2px;">Custom Blinds &amp; Curtains · Dubai</span>
     </a>
     <div style="display:flex;align-items:center;gap:12px;">
       <a href="tel:+971508806292" class="hidden md:inline-flex" style="font-size:13px;color:var(--jf-text-light-dim);letter-spacing:.05em;">
         +971 50 880 6292
       </a>
       <a href="https://wa.me/971508806292?text=Hi%20Jan%20Furnishings%2C%20I%27d%20like%20a%20free%20home%20visit%20for%20heat-blocking%20blinds%20and%20curtains."
-         class="cta-gold" style="padding:11px 18px;font-size:13px;" data-track="header_wa">
-        <span style="width:6px;height:6px;background:currentColor;border-radius:50%;"></span>
+         class="cta-gold" style="padding:11px 18px;font-size:13px;white-space:nowrap;" data-track="header_wa">
+        <span style="width:6px;height:6px;background:currentColor;border-radius:50%;flex-shrink:0;"></span>
         WhatsApp Us
       </a>
     </div>
@@ -548,7 +606,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
       <div class="reveal in">
         <div class="pill" style="color:var(--jf-text-light-dim);margin-bottom:28px;">
           <span class="dot"></span>
-          <span>Summer 2026 · Dubai · AD · Sharjah</span>
+          <span>Summer 2026 · Dubai</span>
         </div>
         <h1 class="h-display" style="margin-bottom:24px;">
           Make your home<br/>
@@ -584,7 +642,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
           <div>
             <div class="stars">★★★★★</div>
             <div style="font-size:12px;color:var(--jf-text-light-dim);margin-top:6px;letter-spacing:.05em;">
-              Rated 4.9 across Google · 280+ reviews
+              Rated 5.0 across Google
             </div>
           </div>
         </div>
@@ -593,14 +651,8 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
 
     <!-- Photo: composed of cool interior + hot exterior strip -->
     <div class="hero-heat__photo">
-      <div class="photo-slot slot-interior" style="position:absolute;inset:0;">
-        <div class="photo-slot__label">HERO · cool shaded living room, blinds drawn, sun bleeding around edges</div>
-      </div>
-      <!-- hot exterior strip across the top -->
-      <div class="photo-slot slot-exterior-hot" style="position:absolute;left:0;right:0;top:0;height:22%;border-bottom:1px solid var(--jf-gold);">
-        <div class="photo-slot__label" style="border-left:none;border-bottom:1px solid var(--jf-gold);">SECONDARY · Dubai skyline at 2pm, harsh sun, 44°C</div>
-      </div>
-      <!-- a single delicate gold mark on the inside -->
+      <div style="position:absolute;inset:0;background:url('../assets/summer-2026/beat-the-heat/hero-1.jpg') center/cover no-repeat;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(15,15,15,.45) 0%, transparent 60%);z-index:1;"></div>
       <div style="position:absolute;right:18px;bottom:18px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--jf-gold);letter-spacing:.16em;">
         — INSIDE: 30°C
       </div>
@@ -625,7 +677,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
         <span class="eyebrow" style="color:var(--jf-gold);">What we do</span>
       </div>
       <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.4;color:var(--jf-text-light);max-width:62ch;">
-        Jan Furnishings installs UV-blocking blinds and thermal-lined curtains custom-made for Dubai's climate. The right fabric on the right window can drop indoor temperatures by <em class="italic-soft">6–8°C</em> and meaningfully reduce AC load. We measure, manufacture, and install across Dubai, Abu Dhabi, and Sharjah — usually within a week of your free home visit.
+        Jan Furnishings installs UV-blocking blinds and thermal-lined curtains custom-made for Dubai's climate. The right fabric on the right window can drop indoor temperatures by <em class="italic-soft">6–8°C</em> and meaningfully reduce AC load. We measure, manufacture, and install across Dubai — usually within a week of your free home visit.
       </p>
     </div>
   </div>
@@ -729,8 +781,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
     <div style="display:grid;grid-template-columns:1fr;gap:20px;" class="md:grid-cols-2 lg:grid-cols-4">
 
       <div class="prod-card reveal">
-        <div class="photo-slot slot-interior">
-          <div class="photo-slot__label">Solar Roller · 5% openness, view kept</div>
+        <div class="photo-slot slot-interior" style="background:url('../assets/summer-2026/beat-the-heat/solar-roller-blinds.jpg') center/cover no-repeat;">
         </div>
         <div class="prod-card__body">
           <span class="prod-card__tag">01 · BLOCKS 95% UV</span>
@@ -744,8 +795,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
       </div>
 
       <div class="prod-card reveal reveal-delay-1">
-        <div class="photo-slot slot-interior">
-          <div class="photo-slot__label">Blackout Roller · zero light, max heat block</div>
+        <div class="photo-slot slot-interior" style="background:url('../assets/summer-2026/beat-the-heat/blackout-roller-blinds.jpg') center/cover no-repeat;">
         </div>
         <div class="prod-card__body">
           <span class="prod-card__tag">02 · ZERO LIGHT</span>
@@ -759,8 +809,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
       </div>
 
       <div class="prod-card reveal reveal-delay-2">
-        <div class="photo-slot slot-interior">
-          <div class="photo-slot__label">Thermal curtain · heaviest fabric we stock</div>
+        <div class="photo-slot slot-interior" style="background:url('../assets/summer-2026/beat-the-heat/thermal-lined-curtains.jpg') center/cover no-repeat;">
         </div>
         <div class="prod-card__body">
           <span class="prod-card__tag">03 · BIGGEST TEMP DROP</span>
@@ -774,8 +823,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
       </div>
 
       <div class="prod-card reveal reveal-delay-3">
-        <div class="photo-slot slot-interior">
-          <div class="photo-slot__label">Sheer + blackout · two-track combination</div>
+        <div class="photo-slot slot-interior" style="background:url('../assets/summer-2026/beat-the-heat/sheer-blackout-combo.jpg') center/cover no-repeat;">
         </div>
         <div class="prod-card__body">
           <span class="prod-card__tag">04 · BEST OF BOTH</span>
@@ -805,7 +853,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
       </div>
       <a href="https://g.page/janfurnishings" style="font-size:13px;color:var(--jf-gold);letter-spacing:.05em;display:inline-flex;align-items:center;gap:8px;">
         <span class="stars">★★★★★</span>
-        Read 280+ Google reviews →
+        Read all the Google reviews →
       </a>
     </div>
 
@@ -887,7 +935,7 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
         <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--jf-rule-dark);font-size:13px;color:var(--jf-text-light-dim);line-height:1.7;">
           <strong style="color:var(--jf-text-light);font-weight:500;">Showroom · Al Quoz 3, Dubai</strong><br/>
           Sat–Thu · 9:00 – 19:00 · Fri by appointment<br/>
-          Free home visits across Dubai, Abu Dhabi, Sharjah
+          Free home visits across Dubai
         </div>
       </div>
 
@@ -915,8 +963,6 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
           <select class="jf-input" id="emirate" name="emirate" required>
             <option value="">Choose…</option>
             <option>Dubai</option>
-            <option>Abu Dhabi</option>
-            <option>Sharjah</option>
             <option>Other</option>
           </select>
         </div>
@@ -973,8 +1019,8 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
           <div class="faq-a">Free home visit usually happens within 48 hours. Manufacturing takes 3–5 working days. Installation is one half-day visit. Total: typically under one week.</div>
         </details>
         <details class="faq-item">
-          <summary class="faq-q"><span>Do you serve Abu Dhabi and Sharjah too?</span><span class="faq-icon"></span></summary>
-          <div class="faq-a">Yes. Free home visits across Dubai, Abu Dhabi and Sharjah. Same one-week turnaround. Sharjah and AD visits get scheduled twice a week.</div>
+          <summary class="faq-q"><span>Which areas of Dubai do you serve?</span><span class="faq-icon"></span></summary>
+          <div class="faq-a">All of Dubai — from the Marina to Arabian Ranches to Jumeirah to Silicon Oasis. Same one-week turnaround wherever you are.</div>
         </details>
       </div>
     </div>
@@ -1007,58 +1053,47 @@ footer.jf-footer a:hover { color: var(--jf-gold); }
 </section>
 
 <!-- ============== FOOTER ============== -->
-<footer class="jf-footer" style="padding:64px 0 32px;">
+<footer class="jf-footer">
   <div class="container-jf">
-    <div style="display:grid;grid-template-columns:1fr;gap:48px;" class="md:grid-cols-4">
+    <div class="footer-inner">
       <div>
-        <div class="jf-logo">JAN<small>FURNISHINGS</small></div>
-        <p style="font-size:13px;line-height:1.7;margin-top:18px;max-width:30ch;">Custom curtains, blinds and soft furnishings, made in Al Quoz and fitted across the UAE since 2019.</p>
+        <div class="footer-brand">Jan Furnishings</div>
+        <div class="footer-brand-sub">Custom Curtains &amp; Blinds · Dubai, UAE</div>
       </div>
-      <div>
-        <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Jan Group</div>
-        <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;list-style:none;padding:0;">
-          <li><a href="https://thejanfurniture.com">Jan Furniture (parent)</a></li>
-          <li><a href="https://thejanfurniture.com/upholstery">Jan Upholstery</a></li>
-          <li><a href="https://thejanfurniture.com/joinery">Jan Joinery</a></li>
-          <li><a href="https://thejanfurniture.com/contract">Jan Contract</a></li>
-        </ul>
+      <div class="footer-links">
+        <a href="https://thejanfurniture.com/products.html">Our Products</a>
+        <a href="https://thejanfurniture.com/about.html">About Us</a>
+        <a href="https://thejanfurniture.com/help.html">Help</a>
       </div>
-      <div>
-        <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Contact</div>
-        <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;list-style:none;padding:0;">
-          <li><a href="tel:+971508806292">+971 50 880 6292</a></li>
-          <li><a href="https://wa.me/971508806292">WhatsApp · Same-day reply</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#4c24292020230c382429262d222a393e222538393e29622f2321"><span class="__cf_email__" data-cfemail="640c0108080b24100c010e050a0211160a0d101116014a070b09">[email&#160;protected]</span></a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="eyebrow" style="color:var(--jf-text-light-dim);margin-bottom:14px;">Visit</div>
-        <p style="font-size:14px;line-height:1.7;">
-          Showroom + Workshop<br/>
-          Street 7, Al Quoz Industrial 3<br/>
-          Dubai, United Arab Emirates
-        </p>
+      <div class="footer-contact">
+        <p>WhatsApp: <a href="https://wa.me/971508806292">+971 50 880 6292</a></p>
+        <p>Dubai, United Arab Emirates</p>
+        <p style="margin-top:12px;"><a href="https://thejanfurniture.com" style="color:rgba(255,255,255,0.4);font-size:12px;">thejanfurniture.com</a></p>
       </div>
     </div>
-    <div style="margin-top:56px;padding-top:24px;border-top:1px solid var(--jf-rule-dark);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--jf-text-light-dim);">
-      <span>© 2026 Jan Furnishings · A Jan Group company</span>
-      <span style="font-family:'JetBrains Mono',monospace;letter-spacing:.12em;">Imagery is illustrative · real project photos shot on visit</span>
+    <div class="footer-bottom">
+      <span>© 2026 Jan Furnishings. All rights reserved.</span>
+      <a href="https://wa.me/971508806292" style="color:var(--jf-gold);">WhatsApp Us →</a>
     </div>
   </div>
 </footer>
 
 <!-- Mobile sticky CTA bar -->
 <div class="mobile-cta-bar">
-  <a href="tel:+971508806292" class="cta-ghost-light" style="flex:1;padding:14px;font-size:13px;" data-track="mobile_call">Call</a>
-  <a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20a%20free%20home%20visit." class="cta-gold" style="flex:2;padding:14px;font-size:13px;" data-track="mobile_wa">
-    <span style="width:6px;height:6px;background:currentColor;border-radius:50%;"></span>
+  <a href="tel:+971508806292" class="cta-ghost-light" style="flex:1;padding:14px;font-size:13px;" data-track="mobile_call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.4 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>
+    Call
+  </a>
+  <a href="https://wa.me/971508806292?text=Hi%20Jan%2C%20I%27d%20like%20a%20free%20home%20visit." style="flex:2;padding:14px;font-size:13px;background:#25D366;color:#fff;font-family:'DM Sans',sans-serif;font-weight:500;letter-spacing:0.04em;display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:2px;border:none;cursor:pointer;" data-track="mobile_wa">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6c.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5s.1-.4 0-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3 2 3.1 4.9 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
     WhatsApp · Free Visit
   </a>
 </div>
 
 <!-- Desktop WhatsApp floater -->
 <a href="https://wa.me/971508806292" class="wa-floater" aria-label="WhatsApp Jan Furnishings" data-track="floater_wa">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6c.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5s.1-.4 0-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3 2 3.1 4.9 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6c.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5s.1-.4 0-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3 2 3.1 4.9 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  WhatsApp Us
 </a>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -1069,6 +1104,14 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* Nav scroll state */
+const header = document.querySelector('.jf-header');
+if (header) {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+}
 
 /* Conversion tracking hooks */
 document.querySelectorAll('[data-track]').forEach(el => {
